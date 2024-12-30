@@ -1,0 +1,418 @@
+'use client';
+
+import Navigation from '@/components/Navigation';
+import {
+  ArrowRight,
+  Book,
+  Download,
+  FileText,
+  Gamepad,
+  Heart,
+  Info,
+  Map,
+  MessageSquare,
+  Play,
+  Star,
+  Users,
+  Users2
+} from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+import React, { ReactElement } from 'react';
+
+interface FeatureCardProps {
+  icon: ReactElement;
+  title: string;
+  description: string;
+}
+
+interface NewsCardProps {
+  image: string;
+  title: string;
+  date: string;
+  description: string;
+}
+
+interface ReviewCardProps {
+  rating: number;
+  author: string;
+  review: string;
+}
+
+interface CommunityCardProps {
+  icon: ReactElement;
+  title: string;
+  description: string;
+}
+
+export default function HomePage(): ReactElement {
+  return (
+    <>
+      <Navigation />
+      {/* Hero Section */}
+      <section className="relative h-screen w-full flex items-center justify-center">
+        <div className="absolute inset-0 w-full h-full">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/60 to-gray-900 z-10" />
+          <Image
+            src="/images/hero-bg.jpg"
+            alt="MouthWashing Hero"
+            className="object-cover"
+            fill
+            priority
+            quality={100}
+            sizes="100vw"
+          />
+        </div>
+        <div className="relative z-20 max-w-[1400px] mx-auto px-6 md:px-8 lg:px-12 text-center">
+          <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 tracking-tight">
+            MouthWashing
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Uncover the truth aboard the Tulpar in this psychological horror adventure
+          </p>
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
+            <Link 
+              href="/download"
+              className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg flex items-center justify-center gap-2 transition-all duration-300"
+            >
+              <Download size={24} />
+              Get the Game
+            </Link>
+            <button 
+              onClick={() => {
+                console.log('Opening trailer...');
+              }}
+              className="bg-gray-800 hover:bg-gray-700 text-white px-8 py-4 rounded-lg flex items-center justify-center gap-2 transition-all duration-300"
+            >
+              <Play size={24} />
+              Watch Trailer
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Sections Navigation */}
+      <section className="w-full py-20 bg-gray-900">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-8 lg:px-12">
+          <h2 className="text-4xl font-bold text-white mb-12 text-center">Explore the Game</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* About Section */}
+            <Link href="/about" className="group h-full">
+              <div className="bg-gray-800 p-8 rounded-lg transition-all duration-300 hover:bg-gray-700 h-full flex flex-col">
+                <div className="text-purple-400 mb-4">
+                  <Info className="w-12 h-12" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">About Game</h3>
+                <p className="text-gray-300 mb-4 text-left">Discover features, requirements, and latest updates</p>
+                <ul className="text-gray-400 space-y-2 mt-auto">
+                  <li className="flex items-center gap-2">
+                    <span className="text-purple-400">•</span>
+                    Game Overview
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-purple-400">•</span>
+                    System Requirements
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-purple-400">•</span>
+                    Changelog
+                  </li>
+                </ul>
+              </div>
+            </Link>
+
+            {/* Characters Section */}
+            <Link href="/characters" className="group h-full">
+              <div className="bg-gray-800 p-8 rounded-lg transition-all duration-300 hover:bg-gray-700 h-full flex flex-col">
+                <div className="text-purple-400 mb-4">
+                  <Users2 className="w-12 h-12" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">Characters</h3>
+                <p className="text-gray-300 mb-4 text-left">Meet the key characters in the story</p>
+                <ul className="text-gray-400 space-y-2 mt-auto">
+                  <li className="flex items-center gap-2">
+                    <span className="text-purple-400">•</span>
+                    Anya
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-purple-400">•</span>
+                    Curly
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-purple-400">•</span>
+                    Jimmy
+                  </li>
+                </ul>
+              </div>
+            </Link>
+
+            {/* Story Section */}
+            <Link href="/story" className="group h-full">
+              <div className="bg-gray-800 p-8 rounded-lg transition-all duration-300 hover:bg-gray-700 h-full flex flex-col">
+                <div className="text-purple-400 mb-4">
+                  <FileText className="w-12 h-12" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">Story</h3>
+                <p className="text-gray-300 mb-4 text-left">Explore the narrative and character relationships</p>
+                <ul className="text-gray-400 space-y-2 mt-auto">
+                  <li className="flex items-center gap-2">
+                    <span className="text-purple-400">•</span>
+                    Main Plot
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-purple-400">•</span>
+                    Character Relations
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-purple-400">•</span>
+                    Story Theories
+                  </li>
+                </ul>
+              </div>
+            </Link>
+
+            {/* Community Section */}
+            <Link href="/community" className="group h-full">
+              <div className="bg-gray-800 p-8 rounded-lg transition-all duration-300 hover:bg-gray-700 h-full flex flex-col">
+                <div className="text-purple-400 mb-4">
+                  <Users className="w-12 h-12" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">Community</h3>
+                <p className="text-gray-300 mb-4 text-left">Join the community and share experiences</p>
+                <ul className="text-gray-400 space-y-2 mt-auto">
+                  <li className="flex items-center gap-2">
+                    <span className="text-purple-400">•</span>
+                    News
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-purple-400">•</span>
+                    Discussions
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-purple-400">•</span>
+                    Fan Works
+                  </li>
+                </ul>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Features */}
+      <section className="w-full py-20 bg-gray-900">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-8 lg:px-12">
+          <h2 className="text-4xl font-bold text-white mb-12 text-center">Key Features</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Link href="/about/overview" className="group">
+              <FeatureCard 
+                icon={<Book className="w-6 h-6" />}
+                title="Immersive Story"
+                description="Experience a deep, psychological narrative that adapts to your choices."
+              />
+            </Link>
+            <Link href="/guide/gameplay" className="group">
+              <FeatureCard 
+                icon={<Gamepad className="w-6 h-6" />}
+                title="Unique Gameplay"
+                description="Master the sanity system and solve intricate puzzles."
+              />
+            </Link>
+            <Link href="/about/features" className="group">
+              <FeatureCard 
+                icon={<Star className="w-6 h-6" />}
+                title="Multiple Endings"
+                description="Your choices matter - discover all possible outcomes."
+              />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest News */}
+      <section className="w-full py-20 bg-gray-800">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-8 lg:px-12">
+          <h2 className="text-4xl font-bold text-white mb-12 text-center">Latest News</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Link href="/community/news/update-1-2" className="group">
+              <NewsCard
+                image="/images/news/update.jpg"
+                title="Major Update 1.2 Released"
+                date="December 25, 2024"
+                description="New storylines, improved graphics, and more await in our latest update."
+              />
+            </Link>
+            <Link href="/community/news/console-release" className="group">
+              <NewsCard
+                image="/images/news/console.jpg"
+                title="Console Version Announcement"
+                date="December 20, 2024"
+                description="MouthWashing is coming to PS5 and Xbox Series X|S in 2024."
+              />
+            </Link>
+            <Link href="/community/news/awards" className="group">
+              <NewsCard
+                image="/images/news/award.jpg"
+                title="Game Awards Nomination"
+                date="December 15, 2024"
+                description="MouthWashing nominated for Best Horror Game of 2024."
+              />
+            </Link>
+          </div>
+          <div className="text-center mt-12">
+            <Link href="/community/news" 
+              className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors">
+              View All News
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews Section */}
+      <section className="w-full py-20 bg-gray-900">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-8 lg:px-12">
+          <h2 className="text-4xl font-bold text-white mb-12 text-center">Player Reviews</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Link href="/community/reviews" className="group">
+              <ReviewCard
+                rating={5}
+                author="GameSpot"
+                review="A masterpiece of psychological horror that will keep you on the edge of your seat."
+              />
+            </Link>
+            <Link href="/community/reviews" className="group">
+              <ReviewCard
+                rating={5}
+                author="IGN"
+                review="Innovative gameplay mechanics combined with a haunting narrative."
+              />
+            </Link>
+            <Link href="/community/reviews" className="group">
+              <ReviewCard
+                rating={4.5}
+                author="PC Gamer"
+                review="Sets a new standard for horror gaming with its unique approach."
+              />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Community Hub */}
+      <section className="w-full py-20 bg-gray-800">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-8 lg:px-12">
+          <h2 className="text-4xl font-bold text-white mb-12 text-center">Join Our Community</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Link href="/community/discussion" className="group">
+              <CommunityCard
+                icon={<MessageSquare className="w-12 h-12" />}
+                title="Discussion Forums"
+                description="Share theories and strategies with other players."
+              />
+            </Link>
+            <Link href="/community/fanworks" className="group">
+              <CommunityCard
+                icon={<Heart className="w-12 h-12" />}
+                title="Fan Creations"
+                description="Explore amazing fan art and stories."
+              />
+            </Link>
+            <Link href="/guide" className="group">
+              <CommunityCard
+                icon={<Map className="w-12 h-12" />}
+                title="Guides & Wikis"
+                description="Find comprehensive guides and hidden secrets."
+              />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="w-full py-20 bg-gray-900">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-8 lg:px-12 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Begin Your Journey?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Download MouthWashing now and uncover the mysteries that await.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/resources/download"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors">
+              <Download className="w-5 h-5" />
+              Download Now
+            </Link>
+            <Link href="/guide/beginner"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors">
+              <Play className="w-5 h-5" />
+              Beginner's Guide
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
+function FeatureCard({ icon, title, description }: FeatureCardProps) {
+  return (
+    <div className="bg-gray-900 p-8 rounded-lg">
+      <div className="text-purple-400 mb-4">
+        {React.cloneElement(icon, { size: 48 })}
+      </div>
+      <h3 className="text-xl font-bold text-white mb-4">{title}</h3>
+      <p className="text-gray-300">{description}</p>
+    </div>
+  );
+}
+
+function NewsCard({ image, title, date, description }: NewsCardProps) {
+  return (
+    <div className="bg-gray-800 rounded-lg overflow-hidden">
+      <div className="aspect-video bg-gray-700">
+        <Image
+          src={image}
+          alt={title}
+          className="w-full h-full object-cover"
+          width={400}
+          height={225}
+        />
+      </div>
+      <div className="p-6">
+        <div className="flex justify-between items-start mb-2">
+          <h3 className="text-xl font-bold text-white">{title}</h3>
+          <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-sm">
+            News
+          </span>
+        </div>
+        <p className="text-gray-400 text-sm mb-2">{date}</p>
+        <p className="text-gray-300">{description}</p>
+      </div>
+    </div>
+  );
+}
+
+function ReviewCard({ rating, author, review }: ReviewCardProps) {
+  return (
+    <div className="bg-gray-900 p-8 rounded-lg">
+      <div className="flex items-center gap-2 text-yellow-400 mb-4">
+        <Star size={24} />
+        <span className="text-2xl font-bold">{rating}</span>
+      </div>
+      <p className="text-xl text-white mb-4">"{review}"</p>
+      <p className="text-gray-400">- {author}</p>
+    </div>
+  );
+}
+
+function CommunityCard({ icon, title, description }: CommunityCardProps) {
+  return (
+    <div className="bg-gray-800 p-8 rounded-lg">
+      <div className="text-purple-400 mb-4">
+        {React.cloneElement(icon, { size: 48 })}
+      </div>
+      <h3 className="text-xl font-bold text-white mb-4">{title}</h3>
+      <p className="text-gray-300 mb-6">{description}</p>
+    </div>
+  );
+}
