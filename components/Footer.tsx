@@ -13,10 +13,10 @@ const Footer = () => {
           {/* Game Logo and Description */}
           <div className="col-span-1 md:col-span-2">
             <Image
-              src="/images/logo-vertical.png"
+              src="/logo-vertical.png"
               alt="MouthWashing Logo"
               width={180}
-              height={60}
+              height={180}
               className="mb-4"
             />
             <p className="text-gray-400 mb-4">

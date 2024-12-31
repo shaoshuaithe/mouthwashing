@@ -78,10 +78,10 @@ const Navigation = () => {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
-              src="/images/logo-horizontal.png"
+              src="/logo-vertical.png"
               alt="MouthWashing"
-              width={120}
-              height={40}
+              width={180}
+              height={180}
               className="h-8 w-auto"
             />
           </Link>
