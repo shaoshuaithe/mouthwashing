@@ -1,0 +1,78 @@
+.infoItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.infoLabel {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.infoValue {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+.section {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.sectionContent {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.relationship {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #3b82f6;
+}
+
+.relationship h3 {
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.relationshipType {
+  color: #60a5fa;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.relationshipDescription {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.storyPhase {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.storyPhase h3 {
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.storyPhase p {
+  color: rgba(255, 255, 255, 0.8);
+} 

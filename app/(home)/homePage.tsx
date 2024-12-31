@@ -54,7 +54,7 @@ export default function HomePage(): ReactElement {
         <div className="absolute inset-0 w-full h-full">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/60 to-gray-900 z-10" />
           <Image
-            src="/images/hero-bg.jpg"
+            src="/2.jpg"
             alt="MouthWashing Hero"
             className="object-cover"
             fill
@@ -236,7 +236,7 @@ export default function HomePage(): ReactElement {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Link href="/community/news/update-1-2" className="group">
               <NewsCard
-                image="/images/news/update.jpg"
+                image="/1-440-225.jpg"
                 title="Major Update 1.2 Released"
                 date="December 25, 2024"
                 description="New storylines, improved graphics, and more await in our latest update."
@@ -244,7 +244,7 @@ export default function HomePage(): ReactElement {
             </Link>
             <Link href="/community/news/console-release" className="group">
               <NewsCard
-                image="/images/news/console.jpg"
+                image="/2-440-225.jpg"
                 title="Console Version Announcement"
                 date="December 20, 2024"
                 description="MouthWashing is coming to PS5 and Xbox Series X|S in 2024."
@@ -252,7 +252,7 @@ export default function HomePage(): ReactElement {
             </Link>
             <Link href="/community/news/awards" className="group">
               <NewsCard
-                image="/images/news/award.jpg"
+                image="/3-440-225.jpg"
                 title="Game Awards Nomination"
                 date="December 15, 2024"
                 description="MouthWashing nominated for Best Horror Game of 2024."
