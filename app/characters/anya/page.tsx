@@ -2,6 +2,7 @@
 
 import Navigation from '@/components/Navigation';
 import { Quote } from 'lucide-react';
+import Link from 'next/link';
 import styles from './character.module.css';
 
 // 组件类型定义
@@ -74,14 +75,11 @@ function Section({ title, children }: SectionProps) {
 
 function RelationshipCard({ name, relationship, description, href }: RelationshipCardProps) {
   return (
-    <div className={styles.relationship}>
+    <Link href={href} className={styles.relationship}>
       <h3>{name}</h3>
       <p className={styles.relationshipType}>{relationship}</p>
       <p className={styles.relationshipDescription}>{description}</p>
-      <a href={href} className={styles.relationshipLink}>
-        View Character
-      </a>
-    </div>
+    </Link>
   );
 }
 

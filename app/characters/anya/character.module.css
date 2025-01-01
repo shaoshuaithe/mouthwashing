@@ -154,6 +154,14 @@
   padding: 1rem;
   margin-bottom: 1rem;
   border-left: 4px solid #3b82f6;
+  display: block;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.relationship:hover {
+  background: rgba(0, 0, 0, 0.3);
+  transform: translateX(4px);
 }
 
 .relationship h3 {
