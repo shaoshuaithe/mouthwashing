@@ -1,3 +1,8 @@
-@import '../styles/character-layout.module.css';
+.page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  padding: 3rem 0;
+  color: #fff;
+}
 
-/* 只保留 Curly 特有的样式（如果有的话） */ 
+// ... 复制 anya/character.module.css 中的所有样式 ... 

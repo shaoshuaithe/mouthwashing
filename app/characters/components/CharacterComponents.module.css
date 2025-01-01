@@ -32,6 +32,9 @@
 
 .sectionContent {
   color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .relationship {
@@ -40,6 +43,14 @@
   padding: 1rem;
   margin-bottom: 1rem;
   border-left: 4px solid #3b82f6;
+  display: block;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.relationship:hover {
+  background: rgba(0, 0, 0, 0.3);
+  transform: translateX(4px);
 }
 
 .relationship h3 {
@@ -75,4 +86,118 @@
 
 .storyPhase p {
   color: rgba(255, 255, 255, 0.8);
+}
+
+.scene {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #3b82f6;
+}
+
+.scene:last-child {
+  margin-bottom: 0;
+}
+
+.scene h3 {
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.scene p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.analysisPoint {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #3b82f6;
+  transition: all 0.3s ease;
+}
+
+.analysisPoint:last-child {
+  margin-bottom: 0;
+}
+
+.analysisPoint h3 {
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.analysisPoint p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.guideLink {
+  display: block;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #3b82f6;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.guideLink:hover {
+  background: rgba(0, 0, 0, 0.3);
+  transform: translateX(4px);
+}
+
+.guideLink h3 {
+  color: #60a5fa;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.guideLink p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.875rem;
+}
+
+.guideLink:last-child {
+  margin-bottom: 0;
+}
+
+.comment {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #3b82f6;
+}
+
+.comment:last-child {
+  margin-bottom: 0;
+}
+
+.commentHeader {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.commentHeader span:first-child {
+  color: #fff;
+  font-weight: 600;
+}
+
+.commentHeader span:not(:first-child) {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.875rem;
+}
+
+.comment p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
 } 

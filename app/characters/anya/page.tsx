@@ -19,6 +19,7 @@ interface RelationshipCardProps {
   name: string;
   relationship: string;
   description: string;
+  href: string;
 }
 
 interface StoryPhaseProps {
@@ -71,12 +72,15 @@ function Section({ title, children }: SectionProps) {
   );
 }
 
-function RelationshipCard({ name, relationship, description }: RelationshipCardProps) {
+function RelationshipCard({ name, relationship, description, href }: RelationshipCardProps) {
   return (
     <div className={styles.relationship}>
       <h3>{name}</h3>
       <p className={styles.relationshipType}>{relationship}</p>
       <p className={styles.relationshipDescription}>{description}</p>
+      <a href={href} className={styles.relationshipLink}>
+        View Character
+      </a>
     </div>
   );
 }
@@ -193,22 +197,32 @@ export default function AnyaCharacterPage() {
           {/* Key Relationships */}
           <Section title="Key Relationships">
             <RelationshipCard
-              name="Jimmy"
-              relationship="Complex Relationship"
-              description="Their relationship becomes central to the story's development, marked by
-              trust issues and hidden truths."
+              name="Curly"
+              relationship="Professional Trust"
+              description="As the ship's medical officer, Anya maintains a professional relationship with
+              Captain Curly, though tensions rise as she uncovers concerning medical data."
+              href="/characters/curly"
             />
             <RelationshipCard
-              name="Captain Curly"
-              relationship="Professional Trust"
-              description="As the ship's medical officer, Anya maintains a professional relationship
-              with Curly, though this is tested as events unfold."
+              name="Jimmy"
+              relationship="Complex Dynamic"
+              description="Their relationship becomes central to the story's development, marked by
+              shared medical mysteries and growing trust issues."
+              href="/characters/jimmy"
             />
             <RelationshipCard
               name="Daisuke"
-              relationship="Medical Patient"
+              relationship="Doctor-Patient Bond"
               description="Anya's role as Daisuke's attending physician reveals crucial plot elements
-              and moral dilemmas."
+              and challenges her medical ethics."
+              href="/characters/daisuke"
+            />
+            <RelationshipCard
+              name="Swansea"
+              relationship="Medical Collaboration"
+              description="Works closely with Swansea on advanced medical research, leading to
+              discoveries that impact both their professional views and the mission's direction."
+              href="/characters/swansea"
             />
           </Section>
 

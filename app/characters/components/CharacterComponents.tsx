@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { ReactNode } from 'react';
 import styles from './CharacterComponents.module.css';
 
@@ -18,6 +19,7 @@ export interface RelationshipCardProps {
   name: string;
   relationship: string;
   description: string;
+  href?: string;
 }
 
 export interface StoryPhaseProps {
@@ -70,12 +72,26 @@ export function Section({ title, children }: SectionProps) {
   );
 }
 
-export function RelationshipCard({ name, relationship, description }: RelationshipCardProps) {
-  return (
-    <div className={styles.relationship}>
+export function RelationshipCard({ name, relationship, description, href }: RelationshipCardProps) {
+  const content = (
+    <>
       <h3>{name}</h3>
       <p className={styles.relationshipType}>{relationship}</p>
       <p className={styles.relationshipDescription}>{description}</p>
+    </>
+  );
+
+  if (href) {
+    return (
+      <Link href={href} className={styles.relationship}>
+        {content}
+      </Link>
+    );
+  }
+
+  return (
+    <div className={styles.relationship}>
+      {content}
     </div>
   );
 }

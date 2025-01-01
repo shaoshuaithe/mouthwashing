@@ -13,34 +13,34 @@ import {
   Section,
   StoryPhase
 } from '../components/CharacterComponents';
-import layoutStyles from '../styles/character-layout.module.css';
+import styles from '../styles/character-layout.module.css';
 
 export default function CurlyCharacterPage() {
   return (
     <>
       <Navigation />
-      <div className={layoutStyles.page}>
-        <div className={layoutStyles.container}>
+      <div className={styles.page}>
+        <div className={styles.container}>
           {/* Character Header */}
-          <div className={layoutStyles.header}>
-            <div className={layoutStyles.headerContent}>
-              <div className={layoutStyles.imageContainer}>
-                <div className={layoutStyles.imageWrapper}>
-                  <img src="/images/characters/curly.png" alt="Curly" className={layoutStyles.characterImage} />
+          <div className={styles.header}>
+            <div className={styles.headerContent}>
+              <div className={styles.imageContainer}>
+                <div className={styles.imageWrapper}>
+                  <img src="/images/characters/curly.png" alt="Curly" className={styles.characterImage} />
                 </div>
                 
-                <div className={layoutStyles.infoContainer}>
+                <div className={styles.infoContainer}>
                   <h1>Curly</h1>
-                  <p className={layoutStyles.description}>
+                  <p className={styles.description}>
                     Captain of the Tulpar, a seasoned leader with a mysterious past and a complex web of loyalties.
                   </p>
                   
-                  <div className={layoutStyles.quote}>
-                    <Quote className={layoutStyles.quoteIcon} size={24} />
+                  <div className={styles.quote}>
+                    <Quote className={styles.quoteIcon} size={24} />
                     <p>"Sometimes the hardest choices are the ones we have to make alone."</p>
                   </div>
 
-                  <div className={layoutStyles.quickInfo}>
+                  <div className={styles.quickInfo}>
                     <InfoItem label="Role" value="Ship Captain" />
                     <InfoItem label="Age" value="42" />
                     <InfoItem label="ID Number" value="TPE-CPT-001" />
@@ -53,12 +53,12 @@ export default function CurlyCharacterPage() {
 
           {/* Background Story */}
           <Section title="Background Story">
-            <p className={layoutStyles.backgroundText}>
+            <p className={styles.backgroundText}>
               Before commanding the Tulpar, Curly served in various high-stakes missions across the galaxy.
               His reputation for handling difficult situations with a calm demeanor made him the perfect
               choice for this sensitive assignment.
             </p>
-            <p className={layoutStyles.backgroundText}>
+            <p className={styles.backgroundText}>
               Despite his outward composure, Curly carries the weight of past decisions that continue to
               influence his leadership style and relationships with the crew.
             </p>
@@ -71,18 +71,28 @@ export default function CurlyCharacterPage() {
               relationship="Professional Dynamic"
               description="Maintains a careful balance between trusting Anya's medical expertise and
               protecting the mission's classified aspects."
+              href="/characters/anya"
             />
             <RelationshipCard
               name="Jimmy"
               relationship="Mentor Figure"
               description="Takes a special interest in Jimmy's development, though their relationship
               becomes strained as secrets surface."
+              href="/characters/jimmy"
             />
             <RelationshipCard
               name="Daisuke"
               relationship="Command Chain"
               description="Values Daisuke's technical skills while monitoring his increasingly
               erratic behavior."
+              href="/characters/daisuke"
+            />
+            <RelationshipCard
+              name="Swansea"
+              relationship="Strategic Alliance"
+              description="Forms a complex alliance with Swansea, balancing their shared mission objectives
+              while navigating potential conflicts of interest in their leadership approaches."
+              href="/characters/swansea"
             />
           </Section>
 
@@ -112,50 +122,46 @@ export default function CurlyCharacterPage() {
 
           {/* Key Scenes */}
           <Section title="Key Scenes">
-            <div className={layoutStyles.sceneGrid}>
-              <SceneCard
-                title="Bridge Confrontation"
-                description="A tense moment where Curly must choose between following orders and protecting his crew."
-              />
-              <SceneCard
-                title="Secret Meeting"
-                description="A clandestine meeting reveals the true scope of the mission and Curly's involvement."
-              />
-              <SceneCard
-                title="Final Decision"
-                description="The climactic moment where Curly's true allegiances are revealed."
-              />
-            </div>
+            <SceneCard
+              title="Bridge Confrontation"
+              description="A tense moment where Curly must choose between following orders and protecting his crew."
+            />
+            <SceneCard
+              title="Secret Meeting"
+              description="A clandestine meeting reveals the true scope of the mission and Curly's involvement."
+            />
+            <SceneCard
+              title="Final Decision"
+              description="The climactic moment where Curly's true allegiances are revealed."
+            />
           </Section>
 
           {/* Character Analysis */}
           <Section title="Character Analysis">
-            <div className={layoutStyles.analysisPoints}>
-              <AnalysisPoint
-                title="Leadership Style"
-                content="Curly's approach to leadership combines military discipline with a deep understanding
-                of human nature, making him both respected and trusted by his crew."
-              />
-              <AnalysisPoint
-                title="Internal Conflict"
-                content="The tension between his duty to the mission and his responsibility to the crew
-                creates compelling character development throughout the story."
-              />
-              <AnalysisPoint
-                title="Past Influences"
-                content="His experiences in previous missions shape his decision-making and relationships,
-                adding depth to his character arc."
-              />
-            </div>
+            <AnalysisPoint
+              title="Leadership Style"
+              content="Curly's approach to leadership combines military discipline with a deep understanding
+              of human nature, making him both respected and trusted by his crew."
+            />
+            <AnalysisPoint
+              title="Internal Conflict"
+              content="The tension between his duty to the mission and his responsibility to the crew
+              creates compelling character development throughout the story."
+            />
+            <AnalysisPoint
+              title="Past Influences"
+              content="His experiences in previous missions shape his decision-making and relationships,
+              adding depth to his character arc."
+            />
           </Section>
 
           {/* Voice Actor Info */}
           <Section title="Voice Actor">
-            <div className={layoutStyles.voiceActor}>
-              <div className={layoutStyles.voiceActorImage}>
+            <div className={styles.voiceActor}>
+              <div className={styles.voiceActorImage}>
                 <img src="/api/placeholder/96/96" alt="Voice Actor" />
               </div>
-              <div className={layoutStyles.voiceActorInfo}>
+              <div className={styles.voiceActorInfo}>
                 <h3>Michael Thompson</h3>
                 <p>Voice of Captain Curly</p>
                 <p>
@@ -166,19 +172,18 @@ export default function CurlyCharacterPage() {
             </div>
           </Section>
 
-          {/* Interactive Gallery */}
+          {/* Character Gallery */}
           <Section title="Character Gallery">
-            <div className={layoutStyles.galleryGrid}>
-              <GalleryItem title="Captain's Portrait" />
-              <GalleryItem title="Bridge Scenes" />
-              <GalleryItem title="Character Development" />
-              <GalleryItem title="Key Moments" />
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <GalleryItem title="Official Art" />
+              <GalleryItem title="Early Sketches" />
+              <GalleryItem title="Key Scenes" />
+              <GalleryItem title="Expressions" />
             </div>
           </Section>
 
           {/* Related Guides */}
           <Section title="Related Guides">
-            <div className={layoutStyles.guideLinks}>
               <GuideLink
                 href="/guide/captain-decisions"
                 title="Captain's Critical Decisions Guide"
@@ -194,17 +199,16 @@ export default function CurlyCharacterPage() {
                 title="Bridge Command Puzzles"
                 description="Solutions to all puzzles in the Captain's storyline"
               />
-            </div>
           </Section>
 
           {/* Comments Section */}
           <Section title="Community Discussion">
             <div className="mb-6">
               <textarea
-                className={layoutStyles.commentInput}
+                className="w-full p-3 border border-gray-300 rounded-lg"
                 placeholder="Share your thoughts about Captain Curly..."
               ></textarea>
-              <button className={layoutStyles.commentButton}>
+              <button className="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
                 Post Comment
               </button>
             </div>
