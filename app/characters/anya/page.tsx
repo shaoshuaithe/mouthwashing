@@ -1,5 +1,3 @@
-'use client';
-
 import Navigation from '@/components/Navigation';
 import { Quote } from 'lucide-react';
 import Link from 'next/link';
@@ -141,6 +139,28 @@ function Comment({ username, date, content }: CommentProps) {
       <p>{content}</p>
     </div>
   );
+}
+
+export async function generateMetadata() {
+  const canonicalUrl = 'https://mouthwashinggame.help/characters/anya';
+  return {
+    title: 'Anya - Medical Officer | MouthWashing Game Character',
+    description: 'Learn about Anya, the dedicated Medical Officer of the Tulpar. Discover her story, relationships, and crucial role in the MouthWashing Game.',
+    openGraph: {
+      title: 'Anya - Medical Officer | MouthWashing Game Character',
+      description: 'Learn about Anya, the dedicated Medical Officer of the Tulpar. Discover her story, relationships, and crucial role in the MouthWashing Game.',
+      images: ['/images/characters/anya.jpg'],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Anya - Medical Officer | MouthWashing Game Character',
+      description: 'Learn about Anya, the dedicated Medical Officer of the Tulpar. Discover her story, relationships, and crucial role in the MouthWashing Game.',
+      images: ['/images/characters/anya.jpg'],
+    },
+    alternates: {
+      canonical: canonicalUrl,
+    },
+  };
 }
 
 export default function AnyaCharacterPage() {

@@ -1,5 +1,3 @@
-'use client';
-
 import Navigation from '@/components/Navigation';
 import { Quote } from 'lucide-react';
 import {
@@ -238,4 +236,26 @@ export default function CurlyCharacterPage() {
       </div>
     </>
   );
+}
+
+export async function generateMetadata() {
+  const canonicalUrl = 'https://mouthwashinggame.help/characters/curly';
+  return {
+    title: 'Captain Curly | MouthWashing Game Character',
+    description: 'Meet Captain Curly, the mysterious leader of the Tulpar. Explore his background, relationships, and the difficult choices he faces in the MouthWashing Game.',
+    openGraph: {
+      title: 'Captain Curly | MouthWashing Game Character',
+      description: 'Meet Captain Curly, the mysterious leader of the Tulpar. Explore his background, relationships, and the difficult choices he faces in the MouthWashing Game.',
+      images: ['/images/characters/curly.jpg'],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Captain Curly | MouthWashing Game Character',
+      description: 'Meet Captain Curly, the mysterious leader of the Tulpar. Explore his background, relationships, and the difficult choices he faces in the MouthWashing Game.',
+      images: ['/images/characters/curly.jpg'],
+    },
+    alternates: {
+      canonical: canonicalUrl,
+    },
+  };
 } 

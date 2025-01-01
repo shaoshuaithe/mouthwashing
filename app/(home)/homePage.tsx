@@ -1,5 +1,3 @@
-'use client';
-
 import Navigation from '@/components/Navigation';
 import {
   ArrowRight,
@@ -78,15 +76,15 @@ export default function HomePage(): ReactElement {
               <Download size={24} />
               Get the Game
             </Link>
-            <button 
-              onClick={() => {
-                console.log('Opening trailer...');
-              }}
+            <Link 
+              href="https://www.youtube.com/watch?v=your-trailer-id"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-gray-800 hover:bg-gray-700 text-white px-8 py-4 rounded-lg flex items-center justify-center gap-2 transition-all duration-300"
             >
               <Play size={24} />
               Watch Trailer
-            </button>
+            </Link>
           </div>
         </div>
       </section>
