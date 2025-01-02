@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname();
+  const pathname = usePathname() || '';
 
   const navigation = [
     {
@@ -35,10 +35,12 @@ const Navigation = () => {
       name: 'Guide',
       href: '/guide',
       submenu: [
-        { name: 'Beginner Guide', href: '/guide/beginner' },
         { name: 'Walkthrough', href: '/guide/walkthrough' },
         { name: 'Achievements', href: '/guide/achievements' },
         { name: 'Endings', href: '/guide/endings' },
+        { name: 'Items', href: '/guide/items' },
+        { name: 'Puzzles', href: '/guide/puzzles' },
+        { name: 'Troubleshooting', href: '/guide/troubleshooting' },
       ],
     },
     {
@@ -71,6 +73,7 @@ const Navigation = () => {
     },
   ];
 
+
   return (
     <nav className="fixed top-0 w-full z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
       <div className="max-w-[1400px] mx-auto px-6 md:px-8 lg:px-12">
@@ -93,7 +96,7 @@ const Navigation = () => {
                 <Link
                   href={item.href}
                   className={`text-gray-300 hover:text-white px-3 py-2 text-sm font-medium flex items-center ${
-                    pathname.startsWith(item.href) ? 'text-white' : ''
+                    pathname?.startsWith(item.href) ? 'text-white' : ''
                   }`}
                 >
                   {item.name}
@@ -138,7 +141,7 @@ const Navigation = () => {
               <Link
                 href={item.href}
                 className={`block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 ${
-                  pathname.startsWith(item.href) ? 'bg-gray-700 text-white' : ''
+                  pathname?.startsWith(item.href) ? 'bg-gray-700 text-white' : ''
                 }`}
               >
                 {item.name}
