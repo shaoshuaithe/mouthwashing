@@ -31,76 +31,46 @@ export default function EndingsGuidePage() {
   const endings: Ending[] = [
     {
       id: 'END_001',
-      name: 'Truth Seeker',
+      name: 'True Salvation',
       type: 'Good',
       difficulty: 'Hard',
-      description: 'Uncover the full truth about the Tulpar\'s mission while keeping the crew alive.',
+      description: 'The perfect ending where you save both the crew and the ship.',
       requirements: [
-        'Complete all major story investigations',
-        'Keep all crew members alive',
-        'Discover all hidden documents',
-        'Maintain high trust with key characters'
+        'Maximum relationship with all crew members',
+        'Solve all major puzzles',
+        'Find all critical documents',
+        'Make the correct final choice'
       ],
-      consequences: 'The truth about the Tulpar is revealed, and the crew works together to overcome the final challenge. Their bonds are strengthened through shared adversity.',
-      characters: ['Anya', 'Curly', 'Daisuke', 'Jimmy', 'Swansea']
+      consequences: 'Everyone survives, the truth is revealed, and the mission is successfully completed.',
+      characters: ['Anya', 'Curly', 'Jimmy', 'Daisuke', 'Swansea']
     },
     {
       id: 'END_002',
-      name: 'Lone Survivor',
-      type: 'Bad',
+      name: 'Bitter Victory',
+      type: 'Neutral',
       difficulty: 'Medium',
-      description: 'Escape the Tulpar alone, leaving the crew behind.',
+      description: 'Save the ship but at a great cost.',
       requirements: [
-        'Choose self-preservation in key moments',
-        'Maintain low trust with crew members',
-        'Complete escape pod sequence'
+        'Complete main objectives',
+        'Sacrifice at least one crew member',
+        'Maintain ship integrity'
       ],
-      consequences: 'You survive but carry the guilt of abandoning your crew. The truth remains buried with the Tulpar.',
-      characters: ['Player Character']
+      consequences: 'The mission succeeds but with heavy casualties and lasting trauma.',
+      characters: ['Curly', 'Daisuke']
     },
     {
       id: 'END_003',
-      name: 'Captain\'s Sacrifice',
-      type: 'Neutral',
-      difficulty: 'Hard',
-      description: 'Captain Curly sacrifices himself to save the crew.',
+      name: 'Into the Void',
+      type: 'Bad',
+      difficulty: 'Easy',
+      description: 'Total mission failure.',
       requirements: [
-        'Build strong loyalty with Curly',
-        'Complete Curly\'s personal storyline',
-        'Choose sacrifice option in final decision'
+        'Fail to maintain ship systems',
+        'Low crew relationships',
+        'Miss critical evidence'
       ],
-      consequences: 'The crew survives thanks to Curly\'s sacrifice, but the emotional cost is high. His legacy lives on through the survivors.',
-      characters: ['Curly', 'Anya', 'Jimmy']
-    },
-    {
-      id: 'END_004',
-      name: 'Scientific Revolution',
-      type: 'Secret',
-      difficulty: 'Hard',
-      description: 'Discover and successfully implement Swansea\'s controversial research.',
-      requirements: [
-        'Complete all research sidequests',
-        'Support Swansea\'s decisions',
-        'Find all research documents',
-        'Successfully complete final experiment'
-      ],
-      consequences: 'A groundbreaking discovery is made, but at a significant ethical cost. The crew must live with the implications of their choices.',
-      characters: ['Swansea', 'Daisuke']
-    },
-    {
-      id: 'END_005',
-      name: 'Medical Breakthrough',
-      type: 'Good',
-      difficulty: 'Hard',
-      description: 'Help Anya develop a cure for the mysterious condition affecting the crew.',
-      requirements: [
-        'Complete all medical bay events',
-        'Support Anya\'s research',
-        'Maintain high relationship with patients',
-        'Find all medical documents'
-      ],
-      consequences: 'The crew is saved through medical innovation, and Anya\'s research becomes groundbreaking in the field.',
-      characters: ['Anya', 'All Crew Members']
+      consequences: 'The ship is lost with all hands. The truth remains buried in space.',
+      characters: ['All Crew']
     }
   ];
 

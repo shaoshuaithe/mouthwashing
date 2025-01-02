@@ -29,6 +29,9 @@
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  max-width: 800px;
   gap: 2rem;
 }
 
@@ -36,9 +39,11 @@
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border-radius: 24px;
-  padding: 2rem;
+  padding: 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 800px;
 }
 
 .achievementCard:hover {
@@ -49,7 +54,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .trophyIcon {
@@ -72,14 +77,14 @@
 
 .achievementDescription {
   color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   line-height: 1.6;
 }
 
 .achievementDetails {
   display: flex;
   gap: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .achievementType,
@@ -137,7 +142,7 @@
 .howToSection {
   background: rgba(0, 0, 0, 0.2);
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 1.25rem;
 }
 
 .howToSection h3 {
@@ -167,6 +172,6 @@
   }
 
   .achievementCard {
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
 } 

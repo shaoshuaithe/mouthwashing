@@ -36,57 +36,54 @@ export default function PuzzlesGuidePage() {
       type: 'Engineering',
       difficulty: 'Hard',
       location: 'Engineering Bay - Level 2',
-      description: 'A complex puzzle involving the calibration of the ship\'s engine core. Players must balance power distribution while maintaining system stability.',
+      description: 'A complex puzzle involving the calibration of the ship\'s engine core.',
       solution: [
         'Set primary power coupling to 75%',
         'Align secondary manifolds to match frequency',
-        'Adjust coolant flow rate to compensate for heat increase',
-        'Lock in settings when stability reaches optimal range'
+        'Adjust coolant flow rate to compensate for heat increase'
       ],
       hints: [
         'Watch the temperature gauge carefully',
         'The frequency patterns follow a specific sequence',
         'Use Jimmy\'s engineering manual for reference'
       ],
-      relatedCharacters: ['Daisuke', 'Jimmy']
+      relatedCharacters: ['Jimmy', 'Daisuke']
     },
     {
       id: 'PUZ_002',
-      name: 'Medical Bay Access',
+      name: 'Medical Bay Security',
       type: 'Medical',
       difficulty: 'Medium',
       location: 'Medical Bay',
-      description: 'A security puzzle protecting sensitive medical data. Players must correctly sequence genetic codes to gain access.',
+      description: 'Bypass the medical bay security system to access critical patient data.',
       solution: [
-        'Match DNA sequence patterns',
-        'Input correct medical authorization codes',
-        'Verify biometric data',
-        'Complete system authentication'
+        'Find the security keycard',
+        'Input correct medical codes',
+        'Override biometric scanner'
       ],
       hints: [
-        'Look for patterns in the genetic sequences',
-        'Anya\'s medical logs contain crucial information',
-        'Pay attention to color-coded markers'
+        'Check Anya\'s office',
+        'Medical codes are in the staff logs',
+        'Use emergency override protocols'
       ],
       relatedCharacters: ['Anya']
     },
     {
       id: 'PUZ_003',
-      name: 'Bridge Security Override',
+      name: 'Bridge Access',
       type: 'Security',
       difficulty: 'Hard',
-      location: 'Ship\'s Bridge',
-      description: 'A high-security puzzle requiring players to bypass the bridge\'s lockdown protocols.',
+      location: 'Bridge Entrance',
+      description: 'Gain emergency access to the ship\'s bridge during lockdown.',
       solution: [
-        'Decrypt emergency override codes',
-        'Bypass secondary security systems',
-        'Reroute power to auxiliary controls',
-        'Execute captain\'s override sequence'
+        'Collect all captain\'s log entries',
+        'Decode the emergency protocols',
+        'Override security lockdown'
       ],
       hints: [
-        'Captain\'s personal logs contain vital clues',
-        'Security patterns change based on ship\'s status',
-        'Time your override attempts carefully'
+        'Captain\'s logs contain clues',
+        'Check emergency manual',
+        'Look for hidden panels'
       ],
       relatedCharacters: ['Curly']
     },

@@ -30,6 +30,8 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
+  width: 100%;
+  max-width: 800px;
   gap: 2rem;
 }
 
