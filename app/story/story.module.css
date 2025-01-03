@@ -1,0 +1,159 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  padding: 4rem 2rem;
+}
+
+.heroSection {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sectionsGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.sectionCard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.sectionCard:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.sectionIcon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+}
+
+.cardDescription {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.featureList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.featureList li {
+  color: rgba(255, 255, 255, 0.8);
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.featureList li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+}
+
+/* Color Variants */
+.blue .sectionIcon {
+  color: #60a5fa;
+}
+
+.blue .featureList li::before {
+  color: #60a5fa;
+}
+
+.purple .sectionIcon {
+  color: #a78bfa;
+}
+
+.purple .featureList li::before {
+  color: #a78bfa;
+}
+
+.green .sectionIcon {
+  color: #34d399;
+}
+
+.green .featureList li::before {
+  color: #34d399;
+}
+
+.amber .sectionIcon {
+  color: #fbbf24;
+}
+
+.amber .featureList li::before {
+  color: #fbbf24;
+}
+
+.red .sectionIcon {
+  color: #f87171;
+}
+
+.red .featureList li::before {
+  color: #f87171;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 1rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .sectionsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionCard {
+    padding: 1.5rem;
+  }
+} 

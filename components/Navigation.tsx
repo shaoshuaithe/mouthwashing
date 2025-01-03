@@ -47,9 +47,10 @@ const Navigation = () => {
       name: 'Story',
       href: '/story',
       submenu: [
+        { name: 'Analysis', href: '/story/analysis' },
         { name: 'Main Plot', href: '/story/main-plot' },
         { name: 'Relationships', href: '/story/relationships' },
-        { name: 'Theories', href: '/story/theories' },
+        { name: 'Secrets', href: '/story/secrets' },
         { name: 'Timeline', href: '/story/timeline' },
       ],
     },
