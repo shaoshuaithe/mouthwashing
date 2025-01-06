@@ -1,7 +1,6 @@
 import Navigation from '@/components/Navigation';
 import {
   ArrowRight,
-  Book,
   Download,
   FileText,
   Gamepad,
@@ -200,62 +199,50 @@ export default function HomePage(): ReactElement {
       {/* Key Features */}
       <section className="w-full py-20 bg-gray-900">
         <div className="max-w-[1400px] mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="text-4xl font-bold text-white mb-12 text-center">Key Features</h2>
+          <h2 className="text-4xl font-bold text-white text-center mb-12">Key Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Link href="/about/overview" className="group">
-              <FeatureCard 
-                icon={<Book className="w-6 h-6" />}
-                title="Immersive Story"
-                description="Experience a deep, psychological narrative that adapts to your choices."
-              />
-            </Link>
-            <Link href="/guide/gameplay" className="group">
-              <FeatureCard 
-                icon={<Gamepad className="w-6 h-6" />}
-                title="Unique Gameplay"
-                description="Master the sanity system and solve intricate puzzles."
-              />
-            </Link>
-            <Link href="/about/features" className="group">
-              <FeatureCard 
-                icon={<Star className="w-6 h-6" />}
-                title="Multiple Endings"
-                description="Your choices matter - discover all possible outcomes."
-              />
-            </Link>
+            <FeatureCard
+              icon={<Gamepad />}
+              title="Immersive Gameplay"
+              description="Experience a unique blend of narrative exploration and psychological horror aboard the Tulpar."
+            />
+            <FeatureCard
+              icon={<Users2 />}
+              title="Multiple Perspectives"
+              description="Play through the story from different crew members' viewpoints, each with their own secrets."
+            />
+            <FeatureCard
+              icon={<FileText />}
+              title="Rich Narrative"
+              description="Uncover a deep, branching story where your choices shape the fate of the crew."
+            />
           </div>
         </div>
       </section>
 
       {/* Latest News */}
-      <section className="w-full py-20 bg-gray-800">
+      <section className="w-full py-20">
         <div className="max-w-[1400px] mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="text-4xl font-bold text-white mb-12 text-center">Latest News</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Link href="/community/news/update-1-2" className="group">
-              <NewsCard
-                image="/1-440-225.jpg"
-                title="Major Update 1.2 Released"
-                date="December 25, 2024"
-                description="New storylines, improved graphics, and more await in our latest update."
-              />
-            </Link>
-            <Link href="/community/news/console-release" className="group">
-              <NewsCard
-                image="/2-440-225.jpg"
-                title="Console Version Announcement"
-                date="December 20, 2024"
-                description="MouthWashing is coming to PS5 and Xbox Series X|S in 2024."
-              />
-            </Link>
-            <Link href="/community/news/awards" className="group">
-              <NewsCard
-                image="/3-440-225.jpg"
-                title="Game Awards Nomination"
-                date="December 15, 2024"
-                description="MouthWashing nominated for Best Horror Game of 2024."
-              />
-            </Link>
+            <NewsCard
+              image="/1-440-225.jpg"
+              title="Major Update 1.2 Released"
+              date="December 25, 2024"
+              description="New storylines, improved graphics, and more await in our latest update."
+            />
+            <NewsCard
+              image="/2-440-225.jpg"
+              title="Console Version Announcement"
+              date="December 20, 2024"
+              description="MouthWashing is coming to PS5 and Xbox Series X|S in 2024."
+            />
+            <NewsCard
+              image="/3-440-225.jpg"
+              title="Game Awards Nomination"
+              date="December 15, 2024"
+              description="MouthWashing nominated for Best Horror Game of 2024."
+            />
           </div>
           <div className="text-center mt-12">
             <Link href="/community/news" 
@@ -268,37 +255,31 @@ export default function HomePage(): ReactElement {
       </section>
 
       {/* Reviews Section */}
-      <section className="w-full py-20 bg-gray-900">
+      <section className="w-full py-20">
         <div className="max-w-[1400px] mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="text-4xl font-bold text-white mb-12 text-center">Player Reviews</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Link href="/community/reviews" className="group">
-              <ReviewCard
-                rating={5}
-                author="GameSpot"
-                review="A masterpiece of psychological horror that will keep you on the edge of your seat."
-              />
-            </Link>
-            <Link href="/community/reviews" className="group">
-              <ReviewCard
-                rating={5}
-                author="IGN"
-                review="Innovative gameplay mechanics combined with a haunting narrative."
-              />
-            </Link>
-            <Link href="/community/reviews" className="group">
-              <ReviewCard
-                rating={4.5}
-                author="PC Gamer"
-                review="Sets a new standard for horror gaming with its unique approach."
-              />
-            </Link>
+            <ReviewCard
+              rating={5}
+              author="GameSpot"
+              review="A masterpiece of psychological horror that will keep you on the edge of your seat."
+            />
+            <ReviewCard
+              rating={5}
+              author="IGN"
+              review="Innovative gameplay mechanics combined with a haunting narrative."
+            />
+            <ReviewCard
+              rating={4.5}
+              author="PC Gamer"
+              review="Sets a new standard for horror gaming with its unique approach."
+            />
           </div>
         </div>
       </section>
 
-      {/* Community Hub */}
-      <section className="w-full py-20 bg-gray-800">
+      {/* Join Our Community */}
+      <section className="w-full py-20">
         <div className="max-w-[1400px] mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="text-4xl font-bold text-white mb-12 text-center">Join Our Community</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -340,7 +321,7 @@ export default function HomePage(): ReactElement {
               <Download className="w-5 h-5" />
               Download Now
             </Link>
-            <Link href="/guide/beginner"
+            <Link href="/guide"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors">
               <Play className="w-5 h-5" />
               Beginner's Guide
@@ -354,7 +335,7 @@ export default function HomePage(): ReactElement {
 
 function FeatureCard({ icon, title, description }: FeatureCardProps) {
   return (
-    <div className="bg-gray-900 p-8 rounded-lg">
+    <div className="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-purple-500 transition-all duration-300 hover:transform hover:-translate-y-1">
       <div className="text-purple-400 mb-4">
         {React.cloneElement(icon, { size: 48 })}
       </div>
@@ -366,7 +347,7 @@ function FeatureCard({ icon, title, description }: FeatureCardProps) {
 
 function NewsCard({ image, title, date, description }: NewsCardProps) {
   return (
-    <div className="bg-gray-800 rounded-lg overflow-hidden">
+    <div className="bg-gray-800 rounded-lg overflow-hidden h-full flex flex-col border border-gray-700 hover:border-purple-500 transition-all duration-300 hover:transform hover:-translate-y-1">
       <div className="aspect-video bg-gray-700">
         <Image
           src={image}
@@ -376,7 +357,7 @@ function NewsCard({ image, title, date, description }: NewsCardProps) {
           height={225}
         />
       </div>
-      <div className="p-6">
+      <div className="p-6 flex flex-col flex-grow">
         <div className="flex justify-between items-start mb-2">
           <h3 className="text-xl font-bold text-white">{title}</h3>
           <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-sm">
@@ -384,7 +365,7 @@ function NewsCard({ image, title, date, description }: NewsCardProps) {
           </span>
         </div>
         <p className="text-gray-400 text-sm mb-2">{date}</p>
-        <p className="text-gray-300">{description}</p>
+        <p className="text-gray-300 flex-grow">{description}</p>
       </div>
     </div>
   );
@@ -392,12 +373,12 @@ function NewsCard({ image, title, date, description }: NewsCardProps) {
 
 function ReviewCard({ rating, author, review }: ReviewCardProps) {
   return (
-    <div className="bg-gray-900 p-8 rounded-lg">
+    <div className="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-purple-500 transition-all duration-300 hover:transform hover:-translate-y-1 h-full flex flex-col">
       <div className="flex items-center gap-2 text-yellow-400 mb-4">
         <Star size={24} />
         <span className="text-2xl font-bold">{rating}</span>
       </div>
-      <p className="text-xl text-white mb-4">"{review}"</p>
+      <p className="text-xl text-white mb-4 flex-grow">{review}</p>
       <p className="text-gray-400">- {author}</p>
     </div>
   );
@@ -405,7 +386,7 @@ function ReviewCard({ rating, author, review }: ReviewCardProps) {
 
 function CommunityCard({ icon, title, description }: CommunityCardProps) {
   return (
-    <div className="bg-gray-800 p-8 rounded-lg">
+    <div className="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-purple-500 transition-all duration-300 hover:transform hover:-translate-y-1 h-full flex flex-col">
       <div className="text-purple-400 mb-4">
         {React.cloneElement(icon, { size: 48 })}
       </div>

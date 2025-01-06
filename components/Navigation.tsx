@@ -32,6 +32,15 @@ const Navigation = () => {
       ],
     },
     {
+      name: 'Community',
+      href: '/community',
+      submenu: [
+        { name: 'News', href: '/community/news' },
+        { name: 'Discussion', href: '/community/discussion' },
+        { name: 'Fan Works', href: '/community/fanworks' },
+      ],
+    },
+    {
       name: 'Guide',
       href: '/guide',
       submenu: [
@@ -59,17 +68,7 @@ const Navigation = () => {
       href: '/resources',
       submenu: [
         { name: 'Download', href: '/resources/download' },
-        { name: 'Patches', href: '/resources/patches' },
         { name: 'FAQ', href: '/resources/faq' },
-      ],
-    },
-    {
-      name: 'Community',
-      href: '/community',
-      submenu: [
-        { name: 'News', href: '/community/news' },
-        { name: 'Discussion', href: '/community/discussion' },
-        { name: 'Fan Works', href: '/community/fanworks' },
       ],
     },
   ];
@@ -109,7 +108,7 @@ const Navigation = () => {
                       <Link
                         key={subitem.name}
                         href={subitem.href}
-                        className={`block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white ${
+                        className={`block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white text-left ${
                           pathname === subitem.href ? 'bg-gray-700 text-white' : ''
                         }`}
                       >

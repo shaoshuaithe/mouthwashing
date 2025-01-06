@@ -1,123 +1,107 @@
-import { siteConfig } from "@/config/site";
-import { Facebook, Github, Instagram, Twitter, Youtube } from "lucide-react";
-import Image from "next/image";
+import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
+const footerLinks = {
+  characters: [
+    { name: 'Anya', href: '/characters/anya' },
+    { name: 'Curly', href: '/characters/curly' },
+    { name: 'Jimmy', href: '/characters/jimmy' },
+    { name: 'Daisuke', href: '/characters/daisuke' },
+    { name: 'Swansea', href: '/characters/swansea' },
+  ],
+  guides: [
+    { name: 'Beginner Guide', href: '/guide/beginner' },
+    { name: 'Main Story', href: '/guide/walkthrough' },
+    { name: 'Achievements', href: '/guide/achievements' },
+    { name: 'Endings', href: '/guide/endings' },
+  ],
+  community: [
+    { 
+      name: 'Steam Community', 
+      href: 'https://steamcommunity.com/app/2475490',
+      external: true 
+    },
+    { 
+      name: 'Steam Workshop', 
+      href: 'https://steamcommunity.com/app/2475490/workshop/',
+      external: true 
+    },
+    { 
+      name: 'Steam Discussions', 
+      href: 'https://steamcommunity.com/app/2475490/discussions/',
+      external: true 
+    },
+  ]
+};
 
+export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 pt-16 pb-8 border-t border-gray-800">
-      <div className="max-w-[1400px] mx-auto px-6 md:px-8 lg:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-          {/* Game Logo and Description */}
-          <div className="col-span-1 md:col-span-2">
-            <Image
-              src="/logo-vertical.png"
-              alt="MouthWashing Logo"
-              width={180}
-              height={180}
-              className="mb-4"
-            />
-            <p className="text-gray-400 mb-4">
-              Experience the psychological horror aboard the Tulpar. Uncover dark secrets, face your fears, and survive the nightmare in MouthWashing.
-            </p>
-            <div className="flex space-x-4">
-              <Link href="https://twitter.com/mouthwashing" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter size={20} />
-              </Link>
-              <Link href="https://discord.gg/mouthwashing" className="text-gray-400 hover:text-white transition-colors">
-                <Facebook size={20} />
-              </Link>
-              <Link href="https://youtube.com/mouthwashing" className="text-gray-400 hover:text-white transition-colors">
-                <Youtube size={20} />
-              </Link>
-              <Link href="https://instagram.com/mouthwashing" className="text-gray-400 hover:text-white transition-colors">
-                <Instagram size={20} />
-              </Link>
-              <Link href="https://github.com/mouthwashing" className="text-gray-400 hover:text-white transition-colors">
-                <Github size={20} />
-              </Link>
-            </div>
-          </div>
-
-          {/* Quick Links */}
+    <footer className="bg-gray-900">
+      <div className="max-w-[1400px] mx-auto px-6 py-12 md:px-8 lg:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Characters */}
           <div>
-            <h3 className="text-white font-bold mb-4">Quick Links</h3>
+            <h3 className="text-white font-bold mb-4">Characters</h3>
             <ul className="space-y-2">
-              <li>
-                <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
-                  About the Game
-                </Link>
-              </li>
-              <li>
-                <Link href="/news" className="text-gray-400 hover:text-white transition-colors">
-                  News & Updates
-                </Link>
-              </li>
-              <li>
-                <Link href="/media" className="text-gray-400 hover:text-white transition-colors">
-                  Media
-                </Link>
-              </li>
-              <li>
-                <Link href="/community" className="text-gray-400 hover:text-white transition-colors">
-                  Community
-                </Link>
-              </li>
-              <li>
-                <Link href="/support" className="text-gray-400 hover:text-white transition-colors">
-                  Support
-                </Link>
-              </li>
+              {footerLinks.characters.map((link) => (
+                <li key={link.href}>
+                  <Link 
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Legal */}
+          {/* Guides */}
           <div>
-            <h3 className="text-white font-bold mb-4">Legal</h3>
+            <h3 className="text-white font-bold mb-4">Guides</h3>
             <ul className="space-y-2">
-              <li>
-                <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">
-                  Terms of Service
-                </Link>
-              </li>
-              <li>
-                <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors">
-                  Cookie Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="/eula" className="text-gray-400 hover:text-white transition-colors">
-                  EULA
-                </Link>
-              </li>
+              {footerLinks.guides.map((link) => (
+                <li key={link.href}>
+                  <Link 
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Community */}
+          <div>
+            <h3 className="text-white font-bold mb-4">Community</h3>
+            <ul className="space-y-2">
+              {footerLinks.community.map((link) => (
+                <li key={link.href}>
+                  <a 
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                    target={link.external ? "_blank" : undefined}
+                    rel={link.external ? "noopener noreferrer" : undefined}
+                  >
+                    {link.name}
+                    {link.external && (
+                      <ExternalLink className="w-3 h-3" />
+                    )}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-gray-800 text-sm text-gray-400">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              {currentYear} {siteConfig.name}. All rights reserved.
-            </div>
-            <div className="flex items-center space-x-2">
-              <span>Developed by</span>
-              <Link href={siteConfig.url} className="text-purple-400 hover:text-purple-300">
-                {siteConfig.creator}
-              </Link>
-            </div>
-          </div>
+        <div className="mt-8 pt-8 border-t border-gray-800">
+          <p className="text-gray-400 text-sm text-center">
+            © 2024 MouthWashing Game. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}
