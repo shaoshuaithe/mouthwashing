@@ -3,7 +3,6 @@ import { Quote } from 'lucide-react';
 import {
   AnalysisPoint,
   Comment,
-  GalleryItem,
   GuideLink,
   InfoItem,
   RelationshipCard,
@@ -24,7 +23,7 @@ export default function CurlyCharacterPage() {
             <div className={styles.headerContent}>
               <div className={styles.imageContainer}>
                 <div className={styles.imageWrapper}>
-                  <img src="/images/characters/curly.png" alt="Curly" className={styles.characterImage} />
+                  <img src="/images/characters/Curly.webp" alt="Curly" className={styles.characterImage} />
                 </div>
                 
                 <div className={styles.infoContainer}>
@@ -157,26 +156,16 @@ export default function CurlyCharacterPage() {
           <Section title="Voice Actor">
             <div className={styles.voiceActor}>
               <div className={styles.voiceActorImage}>
-                <img src="/api/placeholder/96/96" alt="Voice Actor" />
+                <img src="/images/characters/Ian Hayden.webp" alt="Voice Actor" />
               </div>
               <div className={styles.voiceActorInfo}>
-                <h3>Michael Thompson</h3>
-                <p>Voice of Captain Curly</p>
+                <h3>Ian Hayden</h3>
+                <p>Voice of Curly</p>
                 <p>
-                  A veteran voice actor known for portraying complex authority figures. His performance
-                  captures both Curly's commanding presence and his hidden vulnerabilities.
+                  A veteran voice actor with extensive experience in video games. His deep, commanding
+                  voice brings authority and complexity to Curly's character.
                 </p>
               </div>
-            </div>
-          </Section>
-
-          {/* Character Gallery */}
-          <Section title="Character Gallery">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <GalleryItem title="Official Art" />
-              <GalleryItem title="Early Sketches" />
-              <GalleryItem title="Key Scenes" />
-              <GalleryItem title="Expressions" />
             </div>
           </Section>
 

@@ -3,7 +3,6 @@ import { Quote } from 'lucide-react';
 import {
   AnalysisPoint,
   Comment,
-  GalleryItem,
   GuideLink,
   InfoItem,
   RelationshipCard,
@@ -24,7 +23,7 @@ export default function DaisukeCharacterPage() {
             <div className={styles.headerContent}>
               <div className={styles.imageContainer}>
                 <div className={styles.imageWrapper}>
-                  <img src="/images/characters/daisuke.png" alt="Daisuke" className={styles.characterImage} />
+                  <img src="/images/characters/daisuke.webp" alt="Daisuke" className={styles.characterImage} />
                 </div>
                 
                 <div className={styles.infoContainer}>
@@ -161,26 +160,16 @@ export default function DaisukeCharacterPage() {
           <Section title="Voice Actor">
             <div className={styles.voiceActor}>
               <div className={styles.voiceActorImage}>
-                <img src="/api/placeholder/96/96" alt="Voice Actor" />
+                <img src="/images/characters/Ken Watanabe.webp" alt="Voice Actor" />
               </div>
               <div className={styles.voiceActorInfo}>
                 <h3>Ken Watanabe</h3>
                 <p>Voice of Daisuke</p>
                 <p>
-                  A renowned actor whose performance captures both Daisuke's technical precision
-                  and his growing inner turmoil as the story progresses.
+                  An accomplished voice actor known for his ability to portray complex technical characters.
+                  His performance adds depth to Daisuke's obsessive nature.
                 </p>
               </div>
-            </div>
-          </Section>
-
-          {/* Character Gallery */}
-          <Section title="Character Gallery">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <GalleryItem title="Official Art" />
-              <GalleryItem title="Early Sketches" />
-              <GalleryItem title="Key Scenes" />
-              <GalleryItem title="Expressions" />
             </div>
           </Section>
 

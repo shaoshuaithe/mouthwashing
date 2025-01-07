@@ -10,7 +10,7 @@ const footerLinks = {
     { name: 'Swansea', href: '/characters/swansea' },
   ],
   guides: [
-    { name: 'Beginner Guide', href: '/guide/beginner' },
+    { name: 'Puzzles', href: '/guide/puzzles' },
     { name: 'Main Story', href: '/guide/walkthrough' },
     { name: 'Achievements', href: '/guide/achievements' },
     { name: 'Endings', href: '/guide/endings' },

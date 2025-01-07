@@ -51,7 +51,7 @@ export default function HomePage(): ReactElement {
         <div className="absolute inset-0 w-full h-full">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/60 to-gray-900 z-10" />
           <Image
-            src="/2.jpg"
+            src="/bd.jpg"
             alt="MouthWashing Hero"
             className="object-cover"
             fill
@@ -69,7 +69,7 @@ export default function HomePage(): ReactElement {
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link 
-              href="/download"
+              href="/resources/download"
               className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg flex items-center justify-center gap-2 transition-all duration-300"
             >
               <Download size={24} />

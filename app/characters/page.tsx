@@ -19,35 +19,35 @@ export const metadata: Metadata = {
 const characters = [
   {
     name: 'Anya',
-    image: '/images/characters/anya.png',
+    image: '/images/characters/anya.webp',
     description: 'Ship\'s Medical Officer aboard the Tulpar, responsible for crew health and medical research. Her dedication to medical ethics leads her to uncover disturbing truths.',
     traits: ['Medical Expert', 'Ethical', 'Determined'],
     role: 'Medical Officer'
   },
   {
     name: 'Curly',
-    image: '/images/characters/curly.png',
+    image: '/images/characters/curly.webp',
     description: 'Captain of the Tulpar, a seasoned leader with a mysterious past and a complex web of loyalties. His decisions will shape the fate of the crew.',
     traits: ['Leader', 'Strategic', 'Mysterious'],
     role: 'Ship Captain'
   },
   {
     name: 'Jimmy',
-    image: '/images/characters/jimmy.png',
+    image: '/images/characters/jimmy.webp',
     description: 'Junior Engineer whose natural curiosity and technical aptitude place him at the center of unfolding mysteries aboard the Tulpar.',
     traits: ['Innovative', 'Curious', 'Technical'],
     role: 'Junior Engineer'
   },
   {
     name: 'Daisuke',
-    image: '/images/characters/daisuke.png',
+    image: '/images/characters/daisuke.webp',
     description: 'Chief Engineer whose brilliant mind and growing paranoia about the ship\'s systems may reveal more than just mechanical anomalies.',
     traits: ['Brilliant', 'Obsessive', 'Technical'],
     role: 'Chief Engineer'
   },
   {
     name: 'Swansea',
-    image: '/images/characters/swansea.png',
+    image: '/images/characters/Swansea.webp',
     description: 'Research Director whose dedication to scientific discovery may unlock dangerous secrets about the mission\'s true purpose.',
     traits: ['Scientific', 'Ambitious', 'Complex'],
     role: 'Research Director'

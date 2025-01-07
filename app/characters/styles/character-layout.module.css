@@ -99,6 +99,13 @@
   overflow: hidden;
 }
 
+.voiceActorImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .voiceActorInfo h3 {
   color: #fff;
   font-size: 1.125rem;

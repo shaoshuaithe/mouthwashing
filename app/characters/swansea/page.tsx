@@ -3,7 +3,6 @@ import { Quote } from 'lucide-react';
 import {
   AnalysisPoint,
   Comment,
-  GalleryItem,
   GuideLink,
   InfoItem,
   RelationshipCard,
@@ -24,7 +23,7 @@ export default function SwanseaCharacterPage() {
             <div className={styles.headerContent}>
               <div className={styles.imageContainer}>
                 <div className={styles.imageWrapper}>
-                  <img src="/images/characters/swansea.png" alt="Swansea" className={styles.characterImage} />
+                  <img src="/images/characters/Swansea.webp" alt="Swansea" className={styles.characterImage} />
                 </div>
                 
                 <div className={styles.infoContainer}>
@@ -160,26 +159,16 @@ export default function SwanseaCharacterPage() {
           <Section title="Voice Actor">
             <div className={styles.voiceActor}>
               <div className={styles.voiceActorImage}>
-                <img src="/api/placeholder/96/96" alt="Voice Actor" />
+                <img src="/images/characters/Emily Clarke.webp" alt="Voice Actor" />
               </div>
               <div className={styles.voiceActorInfo}>
-                <h3>Tilda Swinton</h3>
+                <h3>Emily Clarke</h3>
                 <p>Voice of Swansea</p>
                 <p>
-                  Delivers a nuanced performance that captures Swansea's brilliant mind and complex
-                  moral struggles throughout their journey of discovery.
+                  A versatile voice actor who brings both authority and ambiguity to Swansea's character,
+                  perfectly capturing their complex motivations.
                 </p>
               </div>
-            </div>
-          </Section>
-
-          {/* Character Gallery */}
-          <Section title="Character Gallery">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <GalleryItem title="Official Art" />
-              <GalleryItem title="Early Sketches" />
-              <GalleryItem title="Key Scenes" />
-              <GalleryItem title="Expressions" />
             </div>
           </Section>
 

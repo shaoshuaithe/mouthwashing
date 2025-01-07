@@ -3,7 +3,6 @@ import { Quote } from 'lucide-react';
 import {
   AnalysisPoint,
   Comment,
-  GalleryItem,
   GuideLink,
   InfoItem,
   RelationshipCard,
@@ -24,7 +23,7 @@ export default function JimmyCharacterPage() {
             <div className={styles.headerContent}>
               <div className={styles.imageContainer}>
                 <div className={styles.imageWrapper}>
-                  <img src="/images/characters/jimmy.png" alt="Jimmy" className={styles.characterImage} />
+                  <img src="/images/characters/jimmy.webp" alt="Jimmy" className={styles.characterImage} />
                 </div>
                 
                 <div className={styles.infoContainer}>
@@ -161,26 +160,15 @@ export default function JimmyCharacterPage() {
           <Section title="Voice Actor">
             <div className={styles.voiceActor}>
               <div className={styles.voiceActorImage}>
-                <img src="/api/placeholder/96/96" alt="Voice Actor" />
+                <img src="/images/characters/oliversmith.webp" alt="Voice Actor" />
               </div>
               <div className={styles.voiceActorInfo}>
-                <h3>Tom Holland</h3>
+                <h3>Oliver Smith</h3>
                 <p>Voice of Jimmy</p>
                 <p>
-                  Brings Jimmy's youthful energy and growing determination to life, perfectly
-                  capturing his transformation from rookie engineer to key player in the ship's mysteries.
+                  A rising talent in voice acting, bringing youthful energy and curiosity to Jimmy's character.
                 </p>
               </div>
-            </div>
-          </Section>
-
-          {/* Character Gallery */}
-          <Section title="Character Gallery">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <GalleryItem title="Official Art" />
-              <GalleryItem title="Early Sketches" />
-              <GalleryItem title="Key Scenes" />
-              <GalleryItem title="Expressions" />
             </div>
           </Section>
 

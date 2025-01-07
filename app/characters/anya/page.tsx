@@ -149,13 +149,13 @@ export async function generateMetadata() {
     openGraph: {
       title: 'Anya - Medical Officer | MouthWashing Game Character',
       description: 'Learn about Anya, the dedicated Medical Officer of the Tulpar. Discover her story, relationships, and crucial role in the MouthWashing Game.',
-      images: ['/images/characters/anya.jpg'],
+      images: ['/images/characters/anya.webp'],
     },
     twitter: {
       card: 'summary_large_image',
       title: 'Anya - Medical Officer | MouthWashing Game Character',
       description: 'Learn about Anya, the dedicated Medical Officer of the Tulpar. Discover her story, relationships, and crucial role in the MouthWashing Game.',
-      images: ['/images/characters/anya.jpg'],
+      images: ['/images/characters/anya.webp'],
     },
     alternates: {
       canonical: canonicalUrl,
@@ -174,7 +174,7 @@ export default function AnyaCharacterPage() {
             <div className={styles.headerContent}>
               <div className={styles.imageContainer}>
                 <div className={styles.imageWrapper}>
-                  <img src="/api/placeholder/400/400" alt="Anya" className={styles.characterImage} />
+                  <img src="/images/characters/anya.webp" alt="Anya" className={styles.characterImage} />
                 </div>
                 
                 <div className={styles.infoContainer}>
@@ -310,7 +310,7 @@ export default function AnyaCharacterPage() {
           <Section title="Voice Actor">
             <div className={styles.voiceActor}>
               <div className={styles.voiceActorImage}>
-                <img src="/api/placeholder/96/96" alt="Voice Actor" />
+                <img src="/images/characters/Suzie Yeung.jpg" alt="Voice Actor" />
               </div>
               <div className={styles.voiceActorInfo}>
                 <h3>Sarah Mitchell</h3>
@@ -320,16 +320,6 @@ export default function AnyaCharacterPage() {
                   of Anya brings depth to the character's emotional journey throughout the story.
                 </p>
               </div>
-            </div>
-          </Section>
-
-          {/* Interactive Gallery */}
-          <Section title="Character Gallery">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <GalleryItem title="Official Art" />
-              <GalleryItem title="Early Sketches" />
-              <GalleryItem title="Key Scenes" />
-              <GalleryItem title="Expressions" />
             </div>
           </Section>
 
