@@ -31,7 +31,11 @@ const footerLinks = {
       href: 'https://steamcommunity.com/app/2475490/discussions/',
       external: true 
     },
-  ]
+  ],
+  legal: [
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' }
+  ],
 };
 
 export default function Footer() {
@@ -90,6 +94,21 @@ export default function Footer() {
                       <ExternalLink className="w-3 h-3" />
                     )}
                   </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider">
+              Legal
+            </h3>
+            <ul className="mt-4 space-y-4">
+              {footerLinks.legal.map((link) => (
+                <li key={link.name}>
+                  <Link href={link.href} className="text-base text-gray-300 hover:text-white">
+                    {link.name}
+                  </Link>
                 </li>
               ))}
             </ul>
