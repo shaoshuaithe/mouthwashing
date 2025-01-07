@@ -76,7 +76,7 @@ export default function HomePage(): ReactElement {
               Get the Game
             </Link>
             <Link 
-              href="https://www.youtube.com/watch?v=your-trailer-id"
+              href="https://www.youtube.com/watch?v=VOL_85L4LG8"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gray-800 hover:bg-gray-700 text-white px-8 py-4 rounded-lg flex items-center justify-center gap-2 transition-all duration-300"
