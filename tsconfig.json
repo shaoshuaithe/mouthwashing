@@ -11,6 +11,9 @@
       "@/*": [
         "./*"
       ],
+      "@/types/*": [
+        "./types/*"
+      ],
       "contentlayer/generated": [
         "./.contentlayer/generated"
       ]
@@ -40,6 +43,7 @@
     ".next/types/**/*.ts",
     ".contentlayer/generated",
     "app/api/paypal/captureorder/route.js",
+    "types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
