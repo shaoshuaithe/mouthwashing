@@ -1,16 +1,12 @@
 import BaiDuAnalytics from "@/app/BaiDuAnalytics";
 import GoogleAnalytics from "@/app/GoogleAnalytics";
-import { NextAuthProvider } from "@/app/providers";
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import { TailwindIndicator } from "@/components/TailwindIndicator";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { siteConfig } from "@/config/site";
-import { getCurrentUser } from "@/lib/session";
 import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
 import "@/styles/loading.css";
-import { UserInfo } from "@/types/user";
 import { Analytics } from "@vercel/analytics/react";
 import { Inter as FontSans } from "next/font/google";
 import localFont from "next/font/local";
@@ -40,7 +36,7 @@ export const metadata = {
 export const viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "#111827" }
+    { media: "(prefers-color-scheme: dark)", color: "#111827" },
   ],
 };
 
@@ -49,8 +45,6 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const user = (await getCurrentUser()) as UserInfo;
-
   return (
     <html lang="en" suppressHydrationWarning className="m-0 p-0 bg-gray-900">
       <head />
@@ -62,15 +56,10 @@ export default async function RootLayout({
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <NextAuthProvider>
-            <Header user={user} />
-            <div className="flex max-full mx-auto flex-col justify-center py-0 min-h-screen">
-              <main className="flex-1 flex justify-center">
-                {children}
-              </main>
-              <Footer />
-            </div>
-          </NextAuthProvider>
+          <div className="flex max-full mx-auto flex-col justify-center py-0 min-h-screen">
+            <main className="flex-1 flex justify-center">{children}</main>
+            <Footer />
+          </div>
           <Analytics />
           <Toaster />
           <TailwindIndicator />
