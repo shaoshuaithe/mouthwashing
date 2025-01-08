@@ -6,8 +6,7 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: [
-      "avatars.githubusercontent.com",
-      "unfollow.top",
+      "mouthwashinggame.help",
     ],
   },
 };
