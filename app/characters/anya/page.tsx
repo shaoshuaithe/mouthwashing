@@ -1,7 +1,7 @@
-import Navigation from '@/components/Navigation';
-import { Quote } from 'lucide-react';
-import Link from 'next/link';
-import styles from './character.module.css';
+import Navigation from "@/components/Navigation";
+import { Quote } from "lucide-react";
+import Link from "next/link";
+import styles from "./character.module.css";
 
 // 组件类型定义
 interface InfoItemProps {
@@ -71,7 +71,12 @@ function Section({ title, children }: SectionProps) {
   );
 }
 
-function RelationshipCard({ name, relationship, description, href }: RelationshipCardProps) {
+function RelationshipCard({
+  name,
+  relationship,
+  description,
+  href,
+}: RelationshipCardProps) {
   return (
     <Link href={href} className={styles.relationship}>
       <h3>{name}</h3>
@@ -112,7 +117,11 @@ function GalleryItem({ title }: GalleryItemProps) {
   return (
     <div className={styles.galleryItem}>
       <div className={styles.galleryImageWrapper}>
-        <img src="/api/placeholder/200/200" alt={title} className={styles.galleryImage} />
+        <img
+          src="/api/placeholder/200/200"
+          alt={title}
+          className={styles.galleryImage}
+        />
       </div>
       <p>{title}</p>
     </div>
@@ -142,20 +151,23 @@ function Comment({ username, date, content }: CommentProps) {
 }
 
 export async function generateMetadata() {
-  const canonicalUrl = 'https://mouthwashinggame.help/characters/anya';
+  const canonicalUrl = "https://mouthwashinggame.help/characters/anya";
   return {
-    title: 'Anya - Medical Officer | MouthWashing Game Character',
-    description: 'Learn about Anya, the dedicated Medical Officer of the Tulpar. Discover her story, relationships, and crucial role in the MouthWashing Game.',
+    title: "Anya - Medical Officer | MouthWashing Game Character",
+    description:
+      "Learn about Anya, the dedicated Medical Officer of the Tulpar. Discover her story, relationships, and crucial role in the MouthWashing Game.",
     openGraph: {
-      title: 'Anya - Medical Officer | MouthWashing Game Character',
-      description: 'Learn about Anya, the dedicated Medical Officer of the Tulpar. Discover her story, relationships, and crucial role in the MouthWashing Game.',
-      images: ['/images/characters/anya.webp'],
+      title: "Anya - Medical Officer | MouthWashing Game Character",
+      description:
+        "Learn about Anya, the dedicated Medical Officer of the Tulpar. Discover her story, relationships, and crucial role in the MouthWashing Game.",
+      images: ["/images/characters/anya.webp"],
     },
     twitter: {
-      card: 'summary_large_image',
-      title: 'Anya - Medical Officer | MouthWashing Game Character',
-      description: 'Learn about Anya, the dedicated Medical Officer of the Tulpar. Discover her story, relationships, and crucial role in the MouthWashing Game.',
-      images: ['/images/characters/anya.webp'],
+      card: "summary_large_image",
+      title: "Anya - Medical Officer | MouthWashing Game Character",
+      description:
+        "Learn about Anya, the dedicated Medical Officer of the Tulpar. Discover her story, relationships, and crucial role in the MouthWashing Game.",
+      images: ["/images/characters/anya.webp"],
     },
     alternates: {
       canonical: canonicalUrl,
@@ -174,18 +186,26 @@ export default function AnyaCharacterPage() {
             <div className={styles.headerContent}>
               <div className={styles.imageContainer}>
                 <div className={styles.imageWrapper}>
-                  <img src="/images/characters/anya.webp" alt="Anya" className={styles.characterImage} />
+                  <img
+                    src="/images/characters/anya.webp"
+                    alt="Anya"
+                    className={styles.characterImage}
+                  />
                 </div>
-                
+
                 <div className={styles.infoContainer}>
                   <h1>Anya</h1>
                   <p className={styles.description}>
-                    Ship's Medical Officer aboard the Tulpar, responsible for crew health and medical research.
+                    Ship's Medical Officer aboard the Tulpar, responsible for
+                    crew health and medical research.
                   </p>
-                  
+
                   <div className={styles.quote}>
                     <Quote className={styles.quoteIcon} size={24} />
-                    <p>"I have to tell them. They need to know what really happened."</p>
+                    <p>
+                      "I have to tell them. They need to know what really
+                      happened."
+                    </p>
                   </div>
 
                   <div className={styles.quickInfo}>
@@ -202,13 +222,15 @@ export default function AnyaCharacterPage() {
           {/* Background Story */}
           <Section title="Background Story">
             <p className={styles.backgroundText}>
-              Prior to joining the Tulpar's crew, Anya worked as a medical researcher specializing in
-              experimental treatments. Her expertise in advanced medical procedures made her an ideal
-              candidate for long-haul space missions.
+              Before joining the Tulpar's crew, Anya worked as a researcher
+              specializing in experimental treatments. Her expertise in advanced
+              techniques made her an ideal candidate for long-haul space
+              missions.
             </p>
             <p className={styles.backgroundText}>
-              Her dedication to medical ethics and patient care often puts her at odds with corporate
-              policies, leading to internal conflicts within the crew.
+              Her dedication to ethical practices and patient care often puts
+              her at odds with corporate policies, leading to internal conflicts
+              within the crew.
             </p>
           </Section>
 
@@ -217,29 +239,25 @@ export default function AnyaCharacterPage() {
             <RelationshipCard
               name="Curly"
               relationship="Professional Trust"
-              description="As the ship's medical officer, Anya maintains a professional relationship with
-              Captain Curly, though tensions rise as she uncovers concerning medical data."
+              description="As the ship's health officer, Anya maintains a professional relationship with Captain Curly, though tensions rise as she uncovers concerning health data."
               href="/characters/curly"
             />
             <RelationshipCard
               name="Jimmy"
               relationship="Complex Dynamic"
-              description="Their relationship becomes central to the story's development, marked by
-              shared medical mysteries and growing trust issues."
+              description="Their relationship becomes central to the story's development, marked by shared scientific enigmas and growing trust issues.."
               href="/characters/jimmy"
             />
             <RelationshipCard
               name="Daisuke"
               relationship="Doctor-Patient Bond"
-              description="Anya's role as Daisuke's attending physician reveals crucial plot elements
-              and challenges her medical ethics."
+              description="Anya's role as Daisuke's primary caregiver reveals crucial plot elements and challenges her professional ethics."
               href="/characters/daisuke"
             />
             <RelationshipCard
               name="Swansea"
               relationship="Medical Collaboration"
-              description="Works closely with Swansea on advanced medical research, leading to
-              discoveries that impact both their professional views and the mission's direction."
+              description="Works closely with Swansea on cutting-edge scientific research, leading to discoveries that influence both their professional perspectives and the mission's trajectory."
               href="/characters/swansea"
             />
           </Section>
@@ -253,8 +271,7 @@ export default function AnyaCharacterPage() {
             />
             <StoryPhase
               phase="Discovery"
-              content="Her medical examinations reveal disturbing information about the crew's
-              condition and the true nature of their mission."
+              content="Her diagnostic evaluations uncover unsettling details about the crew's health and the true purpose of their mission.."
             />
             <StoryPhase
               phase="Conflict"
@@ -271,9 +288,8 @@ export default function AnyaCharacterPage() {
           {/* Key Scenes */}
           <Section title="Key Scenes">
             <SceneCard
-              title="Medical Bay Discovery"
-              description="A pivotal scene where Anya discovers crucial information through routine
-              medical examinations."
+              title="Health Facility Revelation"
+              description="A pivotal scene where Anya uncovers vital information through standard health assessments."
             />
             <SceneCard
               title="Confrontation with Jimmy"
@@ -310,14 +326,18 @@ export default function AnyaCharacterPage() {
           <Section title="Voice Actor">
             <div className={styles.voiceActor}>
               <div className={styles.voiceActorImage}>
-                <img src="/images/characters/Suzie Yeung.jpg" alt="Voice Actor" />
+                <img
+                  src="/images/characters/Suzie Yeung.jpg"
+                  alt="Voice Actor"
+                />
               </div>
               <div className={styles.voiceActorInfo}>
                 <h3>Sarah Mitchell</h3>
                 <p>Voice of Anya</p>
                 <p>
-                  An experienced voice actor known for her work in various games and animations. Her portrayal
-                  of Anya brings depth to the character's emotional journey throughout the story.
+                  An experienced voice actor known for her work in various games
+                  and animations. Her portrayal of Anya brings depth to the
+                  character's emotional journey throughout the story.
                 </p>
               </div>
             </div>
@@ -355,7 +375,7 @@ export default function AnyaCharacterPage() {
                 Post Comment
               </button>
             </div>
-            
+
             {/* Sample Comments */}
             <div className="space-y-4">
               <Comment

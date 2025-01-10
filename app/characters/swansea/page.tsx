@@ -1,5 +1,5 @@
-import Navigation from '@/components/Navigation';
-import { Quote } from 'lucide-react';
+import Navigation from "@/components/Navigation";
+import { Quote } from "lucide-react";
 import {
   AnalysisPoint,
   Comment,
@@ -8,9 +8,9 @@ import {
   RelationshipCard,
   SceneCard,
   Section,
-  StoryPhase
-} from '../components/CharacterComponents';
-import styles from '../styles/character-layout.module.css';
+  StoryPhase,
+} from "../components/CharacterComponents";
+import styles from "../styles/character-layout.module.css";
 
 export default function SwanseaCharacterPage() {
   return (
@@ -23,19 +23,27 @@ export default function SwanseaCharacterPage() {
             <div className={styles.headerContent}>
               <div className={styles.imageContainer}>
                 <div className={styles.imageWrapper}>
-                  <img src="/images/characters/Swansea.webp" alt="Swansea" className={styles.characterImage} />
+                  <img
+                    src="/images/characters/Swansea.webp"
+                    alt="Swansea"
+                    className={styles.characterImage}
+                  />
                 </div>
-                
+
                 <div className={styles.infoContainer}>
                   <h1>Swansea</h1>
                   <p className={styles.description}>
-                    Research Director aboard the Tulpar, a brilliant scientist whose dedication to
-                    the mission's scientific goals may unlock dangerous secrets.
+                    Research Director aboard the Tulpar, a brilliant scientist
+                    whose dedication to the mission's scientific goals may
+                    unlock dangerous secrets.
                   </p>
-                  
+
                   <div className={styles.quote}>
                     <Quote className={styles.quoteIcon} size={24} />
-                    <p>"The pursuit of knowledge demands sacrifices. The question is: who pays the price?"</p>
+                    <p>
+                      "The pursuit of knowledge demands sacrifices. The question
+                      is: who pays the price?"
+                    </p>
                   </div>
 
                   <div className={styles.quickInfo}>
@@ -52,13 +60,15 @@ export default function SwanseaCharacterPage() {
           {/* Background Story */}
           <Section title="Background Story">
             <p className={styles.backgroundText}>
-              A renowned scientist in quantum physics and deep space phenomena, Swansea's theories
-              about space-time manipulation drew both acclaim and controversy in academic circles.
-              The Tulpar mission represents an opportunity to prove these theories correct.
+              A renowned scientist in quantum physics and deep space phenomena,
+              Swansea's theories about space-time manipulation drew both acclaim
+              and controversy in academic circles. The Tulpar mission represents
+              an opportunity to prove these theories correct.
             </p>
             <p className={styles.backgroundText}>
-              Their dedication to scientific discovery often conflicts with ethical considerations,
-              creating tension between research objectives and crew safety.
+              Their commitment to advancing knowledge frequently clashes with
+              moral principles, sparking friction between scientific goals and
+              the well-being of the crew..
             </p>
           </Section>
 
@@ -67,22 +77,19 @@ export default function SwanseaCharacterPage() {
             <RelationshipCard
               name="Curly"
               relationship="Professional Tension"
-              description="Maintains a complex relationship with Captain Curly, often challenging
-              his authority in favor of research priorities."
+              description="Maintains a complicated dynamic with Captain Curly, frequently questioning his decisions to prioritize scientific objectives."
               href="/characters/curly"
             />
             <RelationshipCard
               name="Anya"
               relationship="Scientific Collaboration"
-              description="Works with Anya on various research projects, though their views on
-              ethical boundaries often differ."
+              description="Swansea collaborates with Anya on numerous scientific endeavors, though their perspectives on ethical limits frequently clash."
               href="/characters/anya"
             />
             <RelationshipCard
               name="Daisuke"
               relationship="Technical Partnership"
-              description="Collaborates with Daisuke on ship's systems, particularly those
-              related to their experimental research."
+              description="Partners with Daisuke on the vessel's mechanisms, especially those tied to their groundbreaking experiments."
               href="/characters/daisuke"
             />
             <RelationshipCard
@@ -103,8 +110,7 @@ export default function SwanseaCharacterPage() {
             />
             <StoryPhase
               phase="Ethical Dilemma"
-              content="Begins to face moral questions as research findings suggest potentially
-              dangerous implications."
+              content="Swansea starts grappling with ethical dilemmas as experimental results hint at potentially hazardous consequences."
             />
             <StoryPhase
               phase="Critical Decision"
@@ -121,13 +127,11 @@ export default function SwanseaCharacterPage() {
           <Section title="Key Scenes">
             <SceneCard
               title="Research Breakthrough"
-              description="A major discovery in their quantum research reveals unexpected
-              implications for the mission."
+              description="A breakthrough in their quantum experiments uncovers unforeseen consequences for the mission."
             />
             <SceneCard
               title="Ethical Confrontation"
-              description="A heated debate with the crew about the moral implications of
-              their research direction."
+              description="A tense discussion with the crew regarding the ethical ramifications of their experimental focus."
             />
             <SceneCard
               title="Laboratory Crisis"
@@ -140,8 +144,7 @@ export default function SwanseaCharacterPage() {
           <Section title="Character Analysis">
             <AnalysisPoint
               title="Scientific Drive"
-              content="Their pursuit of knowledge and scientific truth often blinds them to
-              the human cost of their research."
+              content="Their relentless quest for understanding and scientific breakthroughs often overshadows the personal toll of their experiments."
             />
             <AnalysisPoint
               title="Moral Complexity"
@@ -159,14 +162,18 @@ export default function SwanseaCharacterPage() {
           <Section title="Voice Actor">
             <div className={styles.voiceActor}>
               <div className={styles.voiceActorImage}>
-                <img src="/images/characters/Emily Clarke.webp" alt="Voice Actor" />
+                <img
+                  src="/images/characters/Emily Clarke.webp"
+                  alt="Voice Actor"
+                />
               </div>
               <div className={styles.voiceActorInfo}>
                 <h3>Emily Clarke</h3>
                 <p>Voice of Swansea</p>
                 <p>
-                  A versatile voice actor who brings both authority and ambiguity to Swansea's character,
-                  perfectly capturing their complex motivations.
+                  A versatile voice actor who brings both authority and
+                  ambiguity to Swansea's character, perfectly capturing their
+                  complex motivations.
                 </p>
               </div>
             </div>
@@ -202,7 +209,7 @@ export default function SwanseaCharacterPage() {
                 Post Comment
               </button>
             </div>
-            
+
             <div className="space-y-4">
               <Comment
                 username="ScienceBuff"
@@ -231,23 +238,26 @@ export default function SwanseaCharacterPage() {
 }
 
 export async function generateMetadata() {
-  const canonicalUrl = 'https://mouthwashinggame.help/characters/swansea';
+  const canonicalUrl = "https://mouthwashinggame.help/characters/swansea";
   return {
-    title: 'Swansea - Research Director | MouthWashing Game Character',
-    description: 'Meet Swansea, the ambitious Research Director whose pursuit of scientific discovery may unlock dangerous secrets in the MouthWashing Game.',
+    title: "Swansea - Research Director | MouthWashing Game Character",
+    description:
+      "Meet Swansea, the ambitious Research Director whose pursuit of scientific discovery may unlock dangerous secrets in the MouthWashing Game.",
     openGraph: {
-      title: 'Swansea - Research Director | MouthWashing Game Character',
-      description: 'Meet Swansea, the ambitious Research Director whose pursuit of scientific discovery may unlock dangerous secrets in the MouthWashing Game.',
-      images: ['/images/characters/swansea.jpg'],
+      title: "Swansea - Research Director | MouthWashing Game Character",
+      description:
+        "Meet Swansea, the ambitious Research Director whose pursuit of scientific discovery may unlock dangerous secrets in the MouthWashing Game.",
+      images: ["/images/characters/swansea.jpg"],
     },
     twitter: {
-      card: 'summary_large_image',
-      title: 'Swansea - Research Director | MouthWashing Game Character',
-      description: 'Meet Swansea, the ambitious Research Director whose pursuit of scientific discovery may unlock dangerous secrets in the MouthWashing Game.',
-      images: ['/images/characters/swansea.jpg'],
+      card: "summary_large_image",
+      title: "Swansea - Research Director | MouthWashing Game Character",
+      description:
+        "Meet Swansea, the ambitious Research Director whose pursuit of scientific discovery may unlock dangerous secrets in the MouthWashing Game.",
+      images: ["/images/characters/swansea.jpg"],
     },
     alternates: {
       canonical: canonicalUrl,
     },
   };
-} 
+}

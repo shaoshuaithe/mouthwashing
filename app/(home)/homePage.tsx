@@ -99,12 +99,12 @@ export default function HomePage(): ReactElement {
                 <div className="text-purple-400 mb-4">
                   <Info className="w-12 h-12" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">About Game</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">About Mouthwashing Game</h3>
                 <p className="text-gray-300 mb-4 text-left">Discover features, requirements, and latest updates</p>
                 <ul className="text-gray-400 space-y-2 mt-auto">
                   <li className="flex items-center gap-2">
                     <span className="text-purple-400">•</span>
-                    Game Overview
+                    Mouthwashing Overview
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="text-purple-400">•</span>
@@ -125,7 +125,7 @@ export default function HomePage(): ReactElement {
                   <Users2 className="w-12 h-12" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Characters</h3>
-                <p className="text-gray-300 mb-4 text-left">Meet the key characters in the story</p>
+                <p className="text-gray-300 mb-4 text-left">Meet the key characters in the mouthwashing</p>
                 <ul className="text-gray-400 space-y-2 mt-auto">
                   <li className="flex items-center gap-2">
                     <span className="text-purple-400">•</span>
@@ -209,7 +209,7 @@ export default function HomePage(): ReactElement {
             <FeatureCard
               icon={<Users2 />}
               title="Multiple Perspectives"
-              description="Play through the story from different crew members' viewpoints, each with their own secrets."
+              description="Play through the mouthwashing from different crew members' viewpoints, each with their own secrets."
             />
             <FeatureCard
               icon={<FileText />}
@@ -229,7 +229,7 @@ export default function HomePage(): ReactElement {
               image="/1-440-225.jpg"
               title="Major Update 1.2 Released"
               date="December 25, 2024"
-              description="New storylines, improved graphics, and more await in our latest update."
+              description="MouthWashing storylines, improved graphics, and more await in our latest update."
             />
             <NewsCard
               image="/2-440-225.jpg"
@@ -247,7 +247,7 @@ export default function HomePage(): ReactElement {
           <div className="text-center mt-12">
             <Link href="/community/news" 
               className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors">
-              View All News
+              View All
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -311,20 +311,23 @@ export default function HomePage(): ReactElement {
       {/* Call to Action */}
       <section className="w-full py-20 bg-gray-900">
         <div className="max-w-[1400px] mx-auto px-6 md:px-8 lg:px-12 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Begin Your Journey?</h2>
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Begin Your MouthWashing Adventure with Anya and Curly
+          </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Download MouthWashing now and uncover the mysteries that await.
+            Join Anya, Curly, Jimmy and the crew aboard the Tulpar in this psychological horror adventure. 
+            Experience MouthWashing's unique blend of mystery and survival.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/resources/download"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors">
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors download-button">
               <Download className="w-5 h-5" />
-              Download Now
+              <span className="button-text"></span>
             </Link>
             <Link href="/guide"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors">
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors guide-button">
               <Play className="w-5 h-5" />
-              Beginner's Guide
+              <span className="button-text"></span>
             </Link>
           </div>
         </div>
@@ -347,25 +350,23 @@ function FeatureCard({ icon, title, description }: FeatureCardProps) {
 
 function NewsCard({ image, title, date, description }: NewsCardProps) {
   return (
-    <div className="bg-gray-800 rounded-lg overflow-hidden h-full flex flex-col border border-gray-700 hover:border-purple-500 transition-all duration-300 hover:transform hover:-translate-y-1">
-      <div className="aspect-video bg-gray-700">
+    <div className="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:-translate-y-1 transition-all duration-300 group">
+      <div className="relative">
+        <div className="absolute top-4 right-4 px-3 py-1 bg-purple-600 text-white text-sm rounded news-tag">
+          <span className="tag-text"></span>
+        </div>
         <Image
           src={image}
           alt={title}
-          className="w-full h-full object-cover"
-          width={400}
+          width={440}
           height={225}
+          className="w-full h-[225px] object-cover"
         />
       </div>
-      <div className="p-6 flex flex-col flex-grow">
-        <div className="flex justify-between items-start mb-2">
-          <h3 className="text-xl font-bold text-white">{title}</h3>
-          <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-sm">
-            News
-          </span>
-        </div>
-        <p className="text-gray-400 text-sm mb-2">{date}</p>
-        <p className="text-gray-300 flex-grow">{description}</p>
+      <div className="p-6">
+        <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
+        <p className="text-gray-400 text-sm mb-4">{date}</p>
+        <p className="text-gray-300">{description}</p>
       </div>
     </div>
   );

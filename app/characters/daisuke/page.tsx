@@ -1,5 +1,5 @@
-import Navigation from '@/components/Navigation';
-import { Quote } from 'lucide-react';
+import Navigation from "@/components/Navigation";
+import { Quote } from "lucide-react";
 import {
   AnalysisPoint,
   Comment,
@@ -8,9 +8,9 @@ import {
   RelationshipCard,
   SceneCard,
   Section,
-  StoryPhase
-} from '../components/CharacterComponents';
-import styles from '../styles/character-layout.module.css';
+  StoryPhase,
+} from "../components/CharacterComponents";
+import styles from "../styles/character-layout.module.css";
 
 export default function DaisukeCharacterPage() {
   return (
@@ -23,19 +23,27 @@ export default function DaisukeCharacterPage() {
             <div className={styles.headerContent}>
               <div className={styles.imageContainer}>
                 <div className={styles.imageWrapper}>
-                  <img src="/images/characters/daisuke.webp" alt="Daisuke" className={styles.characterImage} />
+                  <img
+                    src="/images/characters/daisuke.webp"
+                    alt="Daisuke"
+                    className={styles.characterImage}
+                  />
                 </div>
-                
+
                 <div className={styles.infoContainer}>
                   <h1>Daisuke</h1>
                   <p className={styles.description}>
-                    Chief Engineer of the Tulpar, a brilliant technician whose obsession with the ship's
-                    systems may reveal more than just mechanical anomalies.
+                    Chief Engineer of the Tulpar, a brilliant technician whose
+                    obsession with the vessel's operations may uncover more than
+                    just technical irregularities.
                   </p>
-                  
+
                   <div className={styles.quote}>
                     <Quote className={styles.quoteIcon} size={24} />
-                    <p>"The patterns in the data... they're trying to tell us something."</p>
+                    <p>
+                      "The patterns in the data... they're trying to tell us
+                      something."
+                    </p>
                   </div>
 
                   <div className={styles.quickInfo}>
@@ -52,13 +60,15 @@ export default function DaisukeCharacterPage() {
           {/* Background Story */}
           <Section title="Background Story">
             <p className={styles.backgroundText}>
-              A prodigy in quantum engineering, Daisuke's innovative approaches to spacecraft systems
-              earned him early recognition in the field. His unique understanding of the Tulpar's
-              experimental technology made him the natural choice for Chief Engineer.
+              A prodigy in quantum engineering, Daisuke's groundbreaking methods
+              in spacecraft mechanics garnered him early acclaim in the field.
+              His unparalleled grasp of the Tulpar's experimental machinery
+              solidified his position as the ideal candidate for Chief Engineer.
             </p>
             <p className={styles.backgroundText}>
-              However, his intense focus on the ship's systems and growing paranoia about certain
-              anomalies have begun to concern his fellow crew members.
+              However, his unwavering fixation on the vessel's operations and
+              escalating suspicions regarding peculiar irregularities have
+              started to unsettle his fellow crew members.
             </p>
           </Section>
 
@@ -98,8 +108,7 @@ export default function DaisukeCharacterPage() {
           <Section title="Story Arc">
             <StoryPhase
               phase="Technical Excellence"
-              content="Initially demonstrates his exceptional skills in maintaining the ship's
-              advanced systems while training his engineering team."
+              content="Initially showcases his extraordinary expertise in managing the vessel's sophisticated mechanisms while mentoring his engineering team."
             />
             <StoryPhase
               phase="Growing Suspicion"
@@ -122,8 +131,7 @@ export default function DaisukeCharacterPage() {
           <Section title="Key Scenes">
             <SceneCard
               title="Engine Room Discovery"
-              description="A late-night maintenance check leads to an unsettling discovery about
-              the ship's core systems."
+              description="A late-night inspection reveals a disturbing anomaly within the vessel's central framework."
             />
             <SceneCard
               title="Data Analysis"
@@ -160,14 +168,18 @@ export default function DaisukeCharacterPage() {
           <Section title="Voice Actor">
             <div className={styles.voiceActor}>
               <div className={styles.voiceActorImage}>
-                <img src="/images/characters/Ken Watanabe.webp" alt="Voice Actor" />
+                <img
+                  src="/images/characters/Ken Watanabe.webp"
+                  alt="Voice Actor"
+                />
               </div>
               <div className={styles.voiceActorInfo}>
                 <h3>Ken Watanabe</h3>
                 <p>Voice of Daisuke</p>
                 <p>
-                  An accomplished voice actor known for his ability to portray complex technical characters.
-                  His performance adds depth to Daisuke's obsessive nature.
+                  An accomplished voice actor known for his ability to portray
+                  complex technical characters. His performance adds depth to
+                  Daisuke's obsessive nature.
                 </p>
               </div>
             </div>
@@ -203,7 +215,7 @@ export default function DaisukeCharacterPage() {
                 Post Comment
               </button>
             </div>
-            
+
             <div className="space-y-4">
               <Comment
                 username="TechExplorer"
@@ -232,23 +244,26 @@ export default function DaisukeCharacterPage() {
 }
 
 export async function generateMetadata() {
-  const canonicalUrl = 'https://mouthwashinggame.help/characters/daisuke';
+  const canonicalUrl = "https://mouthwashinggame.help/characters/daisuke";
   return {
-    title: 'Daisuke - Chief Engineer | MouthWashing Game Character',
-    description: 'Learn about Daisuke, the brilliant but troubled Chief Engineer whose obsession with the Tulpar\'s systems reveals dark secrets in the MouthWashing Game.',
+    title: "Daisuke - Chief Engineer | MouthWashing Game Character",
+    description:
+      "Learn about Daisuke, the brilliant but troubled Chief Engineer whose obsession with the Tulpar's systems reveals dark secrets in the MouthWashing Game.",
     openGraph: {
-      title: 'Daisuke - Chief Engineer | MouthWashing Game Character',
-      description: 'Learn about Daisuke, the brilliant but troubled Chief Engineer whose obsession with the Tulpar\'s systems reveals dark secrets in the MouthWashing Game.',
-      images: ['/images/characters/daisuke.jpg'],
+      title: "Daisuke - Chief Engineer | MouthWashing Game Character",
+      description:
+        "Learn about Daisuke, the brilliant but troubled Chief Engineer whose obsession with the Tulpar's systems reveals dark secrets in the MouthWashing Game.",
+      images: ["/images/characters/daisuke.jpg"],
     },
     twitter: {
-      card: 'summary_large_image',
-      title: 'Daisuke - Chief Engineer | MouthWashing Game Character',
-      description: 'Learn about Daisuke, the brilliant but troubled Chief Engineer whose obsession with the Tulpar\'s systems reveals dark secrets in the MouthWashing Game.',
-      images: ['/images/characters/daisuke.jpg'],
+      card: "summary_large_image",
+      title: "Daisuke - Chief Engineer | MouthWashing Game Character",
+      description:
+        "Learn about Daisuke, the brilliant but troubled Chief Engineer whose obsession with the Tulpar's systems reveals dark secrets in the MouthWashing Game.",
+      images: ["/images/characters/daisuke.jpg"],
     },
     alternates: {
       canonical: canonicalUrl,
     },
   };
-} 
+}
