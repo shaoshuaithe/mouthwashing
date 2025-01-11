@@ -10,12 +10,14 @@ import "@/styles/loading.css";
 import { Analytics } from "@vercel/analytics/react";
 import { Inter as FontSans } from "next/font/google";
 import localFont from "next/font/local";
+import Script from 'next/script';
 import { Toaster } from "react-hot-toast";
 
 const fontHeading = localFont({
   src: "../assets/fonts/CalSans-SemiBold.woff2",
   variable: "--font-heading",
 });
+
 export const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -47,7 +49,14 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning className="m-0 p-0 bg-gray-900">
-      <head />
+      <head>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9490432993161881"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+      </head>
       <body
         className={cn(
           "min-h-screen bg-gray-900 font-sans antialiased m-0 p-0",
