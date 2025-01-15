@@ -188,17 +188,17 @@ export default function DaisukeCharacterPage() {
           {/* Related Guides */}
           <Section title="Related Guides">
             <GuideLink
-              href="/guide/engineering-puzzles"
+              href="/guide/puzzles"
               title="Engineering Puzzle Solutions"
               description="Complete walkthrough of all engineering-related puzzles and challenges"
             />
             <GuideLink
-              href="/guide/endings/daisuke"
+              href="/guide/endings"
               title="Daisuke's Story Paths"
               description="Guide to all possible outcomes in Daisuke's storyline"
             />
             <GuideLink
-              href="/guide/ship-systems"
+              href="/guide/walkthrough"
               title="Ship Systems Guide"
               description="Technical details about the Tulpar's systems and Daisuke's role"
             />

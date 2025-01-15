@@ -175,17 +175,17 @@ export default function JimmyCharacterPage() {
           {/* Related Guides */}
           <Section title="Related Guides">
             <GuideLink
-              href="/guide/engineering-basics"
+              href="/guide/achievements"
               title="Engineering Basics Guide"
               description="Master the fundamental engineering mechanics with Jimmy"
             />
             <GuideLink
-              href="/guide/endings/jimmy"
+              href="/guide/endings"
               title="Jimmy's Story Paths"
               description="Guide to all possible outcomes in Jimmy's storyline"
             />
             <GuideLink
-              href="/guide/investigation"
+              href="/guide/puzzles"
               title="Investigation Guide"
               description="How to uncover all the clues in Jimmy's investigation"
             />

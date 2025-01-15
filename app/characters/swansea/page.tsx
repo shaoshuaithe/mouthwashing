@@ -182,17 +182,17 @@ export default function SwanseaCharacterPage() {
           {/* Related Guides */}
           <Section title="Related Guides">
             <GuideLink
-              href="/guide/research-labs"
+              href="/guide/items"
               title="Research Lab Guide"
               description="Complete walkthrough of all research-related puzzles and experiments"
             />
             <GuideLink
-              href="/guide/endings/swansea"
+              href="/guide/endings"
               title="Swansea's Endings"
               description="Guide to all possible outcomes in Swansea's storyline"
             />
             <GuideLink
-              href="/guide/quantum-mechanics"
+              href="/guide/walkthrough"
               title="Quantum Mechanics Guide"
               description="Understanding the scientific concepts in Swansea's research"
             />

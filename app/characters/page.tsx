@@ -26,7 +26,7 @@ const characters = [
   },
   {
     name: 'Curly',
-    image: '/images/characters/curly.webp',
+    image: '/images/characters/Curly.webp',
     description: 'Captain of the Tulpar, a seasoned leader with a mysterious past and a complex web of loyalties. His decisions will shape the fate of the crew.',
     traits: ['Leader', 'Strategic', 'Mysterious'],
     role: 'Ship Captain'

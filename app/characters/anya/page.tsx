@@ -347,17 +347,17 @@ export default function AnyaCharacterPage() {
           <Section title="Related Guides">
             <div className="space-y-4">
               <GuideLink
-                href="/guide/medical-bay"
+                href="/guide/puzzles"
                 title="Medical Bay Puzzle Guide"
                 description="Complete walkthrough of all Medical Bay puzzles and Anya's role"
               />
               <GuideLink
-                href="/guide/endings/anya"
+                href="/guide/endings"
                 title="Anya's Endings Guide"
                 description="How to achieve all endings related to Anya's story"
               />
               <GuideLink
-                href="/story/analysis/anya-jimmy"
+                href="/story/timeline"
                 title="Anya & Jimmy Relationship Analysis"
                 description="Deep dive into the complex relationship between Anya and Jimmy"
               />

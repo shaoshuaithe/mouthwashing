@@ -172,17 +172,17 @@ export default function CurlyCharacterPage() {
           {/* Related Guides */}
           <Section title="Related Guides">
               <GuideLink
-                href="/guide/captain-decisions"
+                href="/guide/walkthrough"
                 title="Captain's Critical Decisions Guide"
                 description="A complete guide to all major decision points in Curly's storyline"
               />
               <GuideLink
-                href="/guide/endings/curly"
+                href="/guide/endings"
                 title="Curly's Endings Guide"
                 description="How to achieve all endings related to Captain Curly's story"
               />
               <GuideLink
-                href="/guide/bridge-puzzles"
+                href="/guide/puzzles"
                 title="Bridge Command Puzzles"
                 description="Solutions to all puzzles in the Captain's storyline"
               />
